@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<M n="TD1_MasterSpells_ModuleHandler" s="11990808208813349299">
+  <C n="TD1MasterSpellsModuleHandler">
+    <U n="MASTERSPELLS_STARTUP_NOTIFICATION">
+      <V n="icon" t="enabled">
+        <V n="enabled" t="resource_key">
+          <U n="resource_key">
+            <T n="key">2f7d0004:00000000:9D293761EB2AC213</T>
+          </U>
+        </V>
+      </V>
+      <V n="title" t="enabled">
+        <T n="enabled">0x0A2BD243<!--Sage of Mastery Magic + Mastery Spells + Ghost Butler + Alchemy: Release Version--></T>
+      </V>
+      <V n="text" t="single">
+        <T n="single">0x0A2BD244<!--Current Version: <b>Version 2.00</b> \n\nFound any bugs or issues? Do report it over on MTS or on the TD1 Community Server under #report-bugs.--></T>
+      </V>
+      <E n="visual_type">INFORMATION</E>
+      <E n="information_level">PLAYER</E>
+      <E n="expand_behavior">FORCE_EXPAND</E>
+      <L n="ui_responses">
+        <U>
+          <V t="enabled" n="response_command">
+            <U n="enabled">
+              <T n="command">masterspells.td1_discord</T>
+            </U>
+          </V>
+          <T n="text">0x0A2BD249<!--Report Issue To #report-bugs In TD1 CS--></T>
+          <E n="ui_request">SEND_COMMAND</E>
+        </U>
+      </L>
+    </U>
+    <U n="MASTERSPELLS_DEVELOPER_STARTUP_NOTIFICATION">
+      <V n="icon" t="enabled">
+        <V n="enabled" t="resource_key">
+          <U n="resource_key">
+            <T n="key">2f7d0004:00000000:9D293761EB2AC213</T>
+          </U>
+        </V>
+      </V>
+      <V n="title" t="enabled">
+        <T n="enabled">0x0A2BD245<!--Sage of Mastery Magic + Mastery Spells + Ghost Butler + Alchemy: Developer Version--></T>
+      </V>
+      <V n="text" t="single">
+        <T n="single">0x0A2BD246<!--Current Version: <b>Developer Version Version 2.00</b> \n\nThis version is not for distribution and is limited to developer use only. \n\nDeveloped By: TwelfthDoctor1--></T>
+      </V>
+      <E n="visual_type">SPECIAL_MOMENT</E>
+      <E n="information_level">SIM</E>
+      <E n="expand_behavior">FORCE_EXPAND</E>
+      <L n="ui_responses">
+        <U>
+          <V t="enabled" n="response_command">
+            <U n="enabled">
+              <T n="command">masterspells.td1_discord</T>
+            </U>
+          </V>
+          <T n="text">0x0A2BD24A<!--See #report-bugs In TD1 CS--></T>
+          <E n="ui_request">SEND_COMMAND</E>
+        </U>
+      </L>
+    </U>
+    <U n="MASTERSPELLS_BETA_STARTUP_NOTIFICATION">
+      <V n="icon" t="enabled">
+        <V n="enabled" t="resource_key">
+          <U n="resource_key">
+            <T n="key">2f7d0004:00000000:9D293761EB2AC213</T>
+          </U>
+        </V>
+      </V>
+      <V n="title" t="enabled">
+        <T n="enabled">0x0A2BD247<!--Sage of Mastery Magic + Mastery Spells + Ghost Butler + Alchemy: Beta Testing Version--></T>
+      </V>
+      <V n="text" t="single">
+        <T n="single">0x0A2BD248<!--Current Version: <b>Version 2.00</b> \n\nFound any bugs or issues? Do report it over on MTS or on the TD1 Community Server under #report-bugs.--></T>
+      </V>
+      <E n="visual_type">INFORMATION</E>
+      <E n="information_level">SIM</E>
+      <E n="expand_behavior">FORCE_EXPAND</E>
+      <L n="ui_responses">
+        <U>
+          <V t="enabled" n="response_command">
+            <U n="enabled">
+              <T n="command">masterspells.td1_discord</T>
+            </U>
+          </V>
+          <T n="text">0x0A2BD249<!--Report Issue To #report-bugs In TD1 CS--></T>
+          <E n="ui_request">SEND_COMMAND</E>
+        </U>
+      </L>
+    </U>
+    <!--Startup Notification Control-->
+    <T n="MASTERSPELLS_ALLOW_STARTUP_NOTIFICATION">True</T>
+    <T n="MASTERSPELLS_ALLOW_DEVELOPER_STARTUP_NOTIFICATION">True</T>
+    <T n="MASTERSPELLS_ALLOW_BETA_STARTUP_NOTIFICATION">True</T>
+  </C>
+</M>
