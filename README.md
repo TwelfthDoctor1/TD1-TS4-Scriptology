@@ -3,3 +3,5 @@
 ### Repository Contents
 
 * Loot Buff Injector [Version 1.1]
+
+* Startup Notification [Version 1]
