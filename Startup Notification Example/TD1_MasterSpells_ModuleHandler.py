@@ -37,6 +37,7 @@ class TD1MasterSpellsModuleHandler:
         tunable_type=bool,
         default=False
     )
+    notification_ran = False
 
 
 # Command Handling Section
@@ -103,8 +104,14 @@ def td1_discord(_connection=None):
 def td1_masterspells_add_on_load_complete(original, self, *args, **kwargs):
     result = original(self, *args, **kwargs)
 
+    if TD1MasterSpellsModuleHandler.notification_ran is True:
+        
+        return
+    
     try:
         masterspells_startup_notification_handler()
+        
+        TD1MasterSpellsModuleHandler.notification_ran = True
     except Exception as e:
 
         raise Exception(f"Error found with Master Spells Startup Notification Module by TwelfthDoctor1: {str(e)}")
