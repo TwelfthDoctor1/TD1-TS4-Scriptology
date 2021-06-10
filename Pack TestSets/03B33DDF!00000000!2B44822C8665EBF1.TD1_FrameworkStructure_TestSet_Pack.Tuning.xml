@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<M n="TD1_FrameworkStructure_TestSet_Pack" s="3117759969792224241">
+  <C n="TD1FrameworkStructurePackTestOverride">
+    <!--Pack TestSet FrameworkStructure-->
+    <!--The Pack TestSet is a TestSet that allows for Pack Tests.-->
+    <!--Pack Tests can be initiated either by testing if it is installed or testing if it can be not installed.-->
+    <!--TestSet Control-->
+    <!--Do not modify the values stated here unless required. Modification can lead to access to unowned pack/integration cheats and may possibly flag LEs should the player use unowned pack/integration cheats.-->
+    <!--Overrides all Pack TestSets to Pass. This will also give access to imcompleted or depreciated sections.-->
+    <T n="FRAMEWORKSTRUCTURE_OVERRIDE_PACK_TESTSET">False</T>
+  </C>
+</M>
