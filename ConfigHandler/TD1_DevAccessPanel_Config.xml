@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<M n="TD1_DevAccessPanel_Config" s="12143312186674213107">
+  <C n="TD1DevAccessPanelConfigHandlerUI">
+    <L n="CONFIG_UI_TEXT_DISPLAY">
+      <U>
+        <T n="option_type">disable_notifs</T>
+        <U n="ui_data">
+          <V n="title" t="enabled">
+      	    <T n="enabled">0xC1855D47<!--Startup Notifications--></T>
+      	  </V>
+      	  <V n="text" t="single">
+            <T n="single">0x96D0661B<!--This Setting modifies whether the Startup Notifications should show up on load complete.--></T>
+          </V>
+          <T n="text_ok">0xBE404130<!--Change Option--></T>
+          <E n="dialog_style">DEFAULT</E>
+          <E n="dialog_bg_style">BG_DEFAULT</E>
+          <L n="dialog_options">
+            <E>DISABLE_CLOSE_BUTTON</E>
+          </L>
+        </U>
+      </U>
+      <U>
+        <T n="option_type">force_debug_cheat_menu</T>
+        <U n="ui_data">
+          <V n="title" t="enabled">
+      	    <T n="enabled">0xC1855D48<!--Force Debug Interactions Into Cheat Pie Menu--></T>
+      	  </V>
+      	  <V n="text" t="single">
+            <T n="single">0x96D0661C<!--This Setting modifies whether Debug Interactions should be seen in Release Versions of the Game via turning Debug Display Type in the Interactions off.--></T>
+          </V>
+          <T n="text_ok">0xBE404130<!--Change Option--></T>
+          <E n="dialog_style">DEFAULT</E>
+          <E n="dialog_bg_style">BG_DEFAULT</E>
+          <L n="dialog_options">
+            <E>DISABLE_CLOSE_BUTTON</E>
+          </L>
+        </U>
+      </U>
+      <U>
+        <T n="option_type">override_debug_menu</T>
+        <U n="ui_data">
+          <V n="title" t="enabled">
+      	    <T n="enabled">0xC1855D49<!--Override Debug Interactions--></T>
+      	  </V>
+      	  <V n="text" t="single">
+            <T n="single">0x96D0661D<!--This Setting modifies whether Debug Interactions without a Cheat Display Type Enabled to be enabled whilst being turned into a Cheat Interaction.--></T>
+          </V>
+          <T n="text_ok">0xBE404130<!--Change Option--></T>
+          <E n="dialog_style">DEFAULT</E>
+          <E n="dialog_bg_style">BG_DEFAULT</E>
+          <L n="dialog_options">
+            <E>DISABLE_CLOSE_BUTTON</E>
+          </L>
+        </U>
+      </U>
+      <U>
+        <T n="option_type">allow_selectable_pets</T>
+        <U n="ui_data">
+          <V n="title" t="enabled">
+      	    <T n="enabled">0xC1855D4A<!--Make Pets Selectable--></T>
+      	  </V>
+      	  <V n="text" t="single">
+            <T n="single">0x96D0661E<!--This Setting modifies whether Pet Sims can be Selectable and Controlled in the game.--></T>
+          </V>
+          <T n="text_ok">0xBE404130<!--Change Option--></T>
+          <E n="dialog_style">DEFAULT</E>
+          <E n="dialog_bg_style">BG_DEFAULT</E>
+          <L n="dialog_options">
+            <E>DISABLE_CLOSE_BUTTON</E>
+          </L>
+        </U>
+      </U>
+      <U>
+        <T n="option_type">override_pack_testset</T>
+        <U n="ui_data">
+          <V n="title" t="enabled">
+      	    <T n="enabled">0xC1855D4B<!--Override Pack TestSets--></T>
+      	  </V>
+      	  <V n="text" t="single">
+            <T n="single">0x96D0661F<!--This Setting modifies whether to override all Pack TestSets to Pass. This will also give access to imcompleted or depreciated sections.--></T>
+          </V>
+          <T n="text_ok">0xBE404130<!--Change Option--></T>
+          <E n="dialog_style">DEFAULT</E>
+          <E n="dialog_bg_style">BG_DEFAULT</E>
+          <L n="dialog_options">
+            <E>DISABLE_CLOSE_BUTTON</E>
+          </L>
+        </U>
+      </U>
+      <U>
+        <T n="option_type">override_integration_testset</T>
+        <U n="ui_data">
+          <V n="title" t="enabled">
+      	    <T n="enabled">0xC1855D4C<!--Override Integration TestSets--></T>
+      	  </V>
+      	  <V n="text" t="single">
+            <T n="single">0x96D06620<!--This Setting modifies whether to override all Integration TestSets to Pass. Note: Certain Integrations do not rely on this and would instead not appear on load should the corresponding mod be not installed.--></T>
+          </V>
+          <T n="text_ok">0xBE404130<!--Change Option--></T>
+          <E n="dialog_style">DEFAULT</E>
+          <E n="dialog_bg_style">BG_DEFAULT</E>
+          <L n="dialog_options">
+            <E>DISABLE_CLOSE_BUTTON</E>
+          </L>
+        </U>
+      </U>
+      <U>
+        <T n="option_type">override_version_testset</T>
+        <U n="ui_data">
+          <V n="title" t="enabled">
+      	    <T n="enabled">0xC1855D4D<!--Override Version TestSets--></T>
+      	  </V>
+      	  <V n="text" t="single">
+            <T n="single">0x96D06621<!--This Setting modifies whether to override all Version TestSets to Pass. This should be unused by default.--></T>
+          </V>
+          <T n="text_ok">0xBE404130<!--Change Option--></T>
+          <E n="dialog_style">DEFAULT</E>
+          <E n="dialog_bg_style">BG_DEFAULT</E>
+          <L n="dialog_options">
+            <E>DISABLE_CLOSE_BUTTON</E>
+          </L>
+        </U>
+      </U>
+      <U>
+        <T n="option_type">cheat_debug_pie_menu</T>
+        <U n="ui_data">
+          <V n="title" t="enabled">
+      	    <T n="enabled">0xC1855D4E<!--Force Cheats into Cheat/Debug Pie Menu--></T>
+      	  </V>
+      	  <V n="text" t="single">
+            <T n="single">0x96D06622<!--This Setting modifies whether cheats should either appear on the Main Pie Menu or on the Cheat/Debug Pie Menu (Shift + Click) which would require testingcheats to be enabled.--></T>
+          </V>
+          <T n="text_ok">0xBE404130<!--Change Option--></T>
+          <E n="dialog_style">DEFAULT</E>
+          <E n="dialog_bg_style">BG_DEFAULT</E>
+          <L n="dialog_options">
+            <E>DISABLE_CLOSE_BUTTON</E>
+          </L>
+        </U>
+      </U>
+    </L>
+  </C>
+</M>
