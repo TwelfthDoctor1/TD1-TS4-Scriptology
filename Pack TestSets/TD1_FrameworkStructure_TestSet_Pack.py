@@ -1,6 +1,6 @@
 from event_testing.results import TestResult
 from event_testing.test_base import BaseTest
-from event_testing.test_events import cached_test
+from caches import cached_test
 from sims4.tuning.tunable import HasTunableSingletonFactory, AutoFactoryInit, TunableEnumEntry, Tunable
 from sims4.common import Pack, is_available_pack
 
