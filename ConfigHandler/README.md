@@ -58,7 +58,7 @@ override_version_testset = False
 cheat_debug_pie_menu = False
 ```
 
-Obviously there is no way for all that to instantly become the config file, thats where code come in.
+Obviously there is no way for all that to instantly become the config file, thats where code comes in.
 
 ### Setting the Base Structure
 
@@ -89,7 +89,7 @@ def get_config_dir():
 
 `config` is to hold the ConfigParser class so that we can use some of its functions. At this stage, you can set up `configparser.ConfigParser()` to whatever variables you require (see ConfigParser for info).
 
-`main_header` is the name of the Header you plan to use. You can have more headers if need be, but it will require more code to handle switching of headers. FOr 1 headers, I recommend using the Mod Name to identify it.
+`main_header` is the name of the Header you plan to use. You can have more headers if need be, but it will require more code to handle switching of headers. If the config file has 1 header, I recommend using the Mod Name to identify it.
 
 Function `get_config_dir() *No Vars` is used to get the file location/directory of the config file and return to when required. The `log_name` is the name of the config file (_I forgot to change it from MasterApprentice Logger, oh well_).
 
@@ -137,9 +137,9 @@ else:
                                owner="TwelfthDoctor1")
 ```
 
-Function `config_prep_file()` is used to prep the comfig file. You need to change the header preset to the one in `main_header` but with []. e.g. [TD1 Settings]. Everything in here is in _write mode_.
+Function `config_prep_file()` is used to prep the config file. You need to change the header preset to the one in `main_header` but with []. e.g. [TD1 Settings]. Everything in here is in _write mode_.
 
-The `if...else` conditional statement below handles whether the config file needs to be prepped or not. As part of my logging procedure, I have my loggers to logg the process here. After the prepping or no prepping, we open up the file as read mode, this will be necessary for the ConfigParser to read.
+The `if...else` conditional statement below handles whether the config file needs to be prepped or not. As part of my logging procedure, I have my loggers to log the process here. After the prepping stage or no prepping stage, we open up the file as read mode, as this will be necessary for the ConfigParser to read.
 
 ### Init Checking
 
