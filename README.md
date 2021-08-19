@@ -1,5 +1,7 @@
 # TD1-TS4-Scriptology
 
+![license](https://img.shields.io/github/license/TwelfthDoctor1/TD1-TS4-Scriptology?color=blueviolet&label=open-src-scripts-license)
+
 ### What is this repository?
 
 This repository is meant for Sims 4 Modders to use my released code for their own use [under MIT License]. The codes released here as Open Source comes from my works from various mod project that I have worked on. Feel free to use these codes as part of your own code.
