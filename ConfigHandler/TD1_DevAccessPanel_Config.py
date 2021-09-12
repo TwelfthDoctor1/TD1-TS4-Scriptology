@@ -8,6 +8,7 @@ from sims4.localization import LocalizationHelperTuning, _create_localized_strin
 from sims4.tuning.tunable import TunableList, TunableMapping, Tunable, TunableTuple, TunableEnumEntry, TunableEnumFlags
 from ui.ui_dialog import UiDialogStyle, UiDialogBGStyle, UiDialogOption, get_defualt_ui_dialog_response, \
     UiDialogOkCancel
+from ui.ui_dialog_generic import UiDialogTextInputOkCancel
 from ui.ui_dialog_notification import UiDialogNotification
 
 # Importation of MasterApprentice Logger
@@ -28,6 +29,8 @@ try:
 except ImportError:
     master_logger = False
 
+# Configuration Keys
+# Used to identify Config Options
 config_key_list = [
     'disable_notifs',
     'override_debug_menu',
@@ -36,13 +39,23 @@ config_key_list = [
     'override_pack_testset',
     'override_integration_testset',
     'override_version_testset',
-    'cheat_debug_pie_menu'
+    'cheat_debug_pie_menu',
+    'ep08_org_rank_decay_lock',
+    'ep06_fame_rank_decay_lock',
+    'ep06_fame_quirks_decay_lock',
+    "drgluon_glubee_feature_unlock"
 ]
 
+# Configuration Values
+# Used to determine said Option holds what value
 preset_modifiers = [
     "False",
     "True",
     "True",
+    "False",
+    "False",
+    "False",
+    "False",
     "False",
     "False",
     "False",
@@ -52,6 +65,7 @@ preset_modifiers = [
 
 
 class TD1DevAccessPanelConfigHandlerUI:
+    CONFIG_UI_TEXT_INPUT = 'config_value'
     CONFIG_UI_TEXT_DISPLAY = TunableMapping(
         description='List to hold the UI Text for each option.',
         key_name='option_type',
@@ -61,13 +75,19 @@ class TD1DevAccessPanelConfigHandlerUI:
             default=''
         ),
         value_name='ui_data',
-        value_type=UiDialogOkCancel.TunableFactory(
-            description='The Dialog for each Option.',
+        value_type=TunableTuple(
+            ok_cancel=UiDialogOkCancel.TunableFactory(
+                description='Meant for Boolean Options.',
+            ),
+            text_input=UiDialogTextInputOkCancel.TunableFactory(
+                description='Meant for String, Integer and Float Options. For 1 Text Input.',
+                text_inputs=(CONFIG_UI_TEXT_INPUT),
+            ),
         )
     )
 
 
-main_dir = Path(__file__).resolve().parent.parent
+main_dir = Path(__file__).resolve().parent.parent.parent.parent
 
 config = configparser.ConfigParser()
 
@@ -101,6 +121,49 @@ def config_prep_file():
             config_file.write("\n" + config_key_list[incrementor] + " = " + preset_modifiers[incrementor])
 
         config_file.close()
+
+
+def config_data_test(data):
+    """
+    This function is a test to determine the data type.
+    :param data:
+    :return:
+    """
+
+    if data == "True" or data == "False":
+        return True
+
+    else:
+        return False
+
+
+def config_data_get(config_func, header, key):
+    """
+    This function is the configuration all-in-one get handler.
+    If the specified value is:
+
+    boolean -> return True/False
+    integer -> Numbers
+    float -> Decimal Numbers
+    else -> Use as String
+    :param config_func:
+    :param header:
+    :param key:
+    :return:
+    """
+    data = config_func.get(header, key)
+
+    if data == "True" or data == "False":
+        return config.getboolean(header, key)
+
+    elif data.isnumeric():
+        return config.getint(header, key)
+
+    elif data.isdecimal():
+        return config.getfloat(header, key)
+
+    else:
+        return config.get(header, key)
 
 
 if os.path.exists(get_config_dir()) is True:
@@ -138,7 +201,7 @@ def print_config_values(_connection=None):
 
 
 @Command('td1devaccess.list_config_notif', command_type=CommandType.Live)
-def print_config_values(_connection=None):
+def print_config_values_notif(_connection=None):
     client = services.client_manager().get_first_client()
     output = Output(_connection)
     text_final = ""
@@ -179,21 +242,31 @@ def set_option(option, _connection=None):
     with open(get_config_dir(), "r") as config_file:
         config.read_file(config_file)
         if config.has_option(main_header, option):
-            orig_value = config.get(main_header, option)
-            orig_value_bool = config.getboolean(main_header, option)
             config_file.close()
 
             for (option_type, dialog_data) in TD1DevAccessPanelConfigHandlerUI.CONFIG_UI_TEXT_DISPLAY.items():
                 if option_type == option:
-                    def on_response(dialog):
-                        if dialog.accepted:
-                            for key in config_key_list:
-                                if key == option:
-                                    option_toggle(config_key_list.index(key))
+                    if config_data_test(preset_modifiers[config_key_list.index(option_type)]) is True:
+                        def on_response(dialog):
+                            if dialog.accepted:
+                                for key in config_key_list:
+                                    if key == option:
+                                        option_toggle(config_key_list.index(key))
 
-                    dialog = dialog_data(None)
-                    dialog.add_listener(on_response)
-                    dialog.show_dialog()
+                        dialog = dialog_data.ok_cancel(None)
+                        dialog.add_listener(on_response)
+                        dialog.show_dialog()
+
+                    else:
+                        def on_response(dialog):
+                            if dialog.accepted:
+                                for key in config_key_list:
+                                    if key == option:
+                                        option_toggle(config_key_list.index(key), str(dialog.text_input_responses.get("config_value")))
+
+                        dialog = dialog_data.text_input(None)
+                        dialog.add_listener(on_response)
+                        dialog.show_dialog()
 
         else:
             output("Wrong Option Specified. Please refer to config list and try again.")
@@ -246,7 +319,14 @@ def append_option(identifier):
 config_init_check()
 
 
-def option_toggle(identifier):
+def boolean_not_converter(state):
+    if state is True:
+        return "False"
+    else:
+        return "True"
+
+
+def option_toggle(identifier, to_set:str=""):
     client = services.client_manager().get_first_client()
     option = config_key_list[identifier]
 
@@ -255,7 +335,7 @@ def option_toggle(identifier):
     else:
         with open(get_config_dir(), "r") as config_file:
             config.read_file(config_file)
-            setting_value = config.getboolean(main_header, option)
+            setting_value = config_data_get(config, main_header, option)
             print("{0} {1}".format(option, setting_value))
 
             if setting_value is True:
@@ -265,6 +345,11 @@ def option_toggle(identifier):
 
             elif setting_value is False:
                 value = "True"
+                config.set(main_header, option, value)
+                config.write(open(get_config_dir(), "w"))
+
+            else:
+                value = to_set
                 config.set(main_header, option, value)
                 config.write(open(get_config_dir(), "w"))
 
@@ -301,5 +386,16 @@ def get_option_value(option):
     """
     with open(get_config_dir(), "r") as config_file:
         config.read_file(config_file)
-        value = config.getboolean(main_header, option)
-        return value
+        data = config.get(main_header, option)
+
+        if data == "True" or data == "False":
+            return config.getboolean(main_header, option)
+
+        elif data.isnumeric():
+            return config.getint(main_header, option)
+
+        elif data.isdecimal():
+            return config.getfloat(main_header, option)
+
+        else:
+            return config.get(main_header, option)
