@@ -4,7 +4,9 @@
 
 ### What is this repository?
 
-This repository is meant for Sims 4 Modders to use my released code for their own use [under MIT License]. The codes released here as Open Source comes from my works from various mod project that I have worked on. Feel free to use these codes as part of your own code.
+This repository is meant for Sims 4 Modders to use my released code for their own use [under MIT License] or to refer to the TDESCs for addons for TD1 Mods.
+
+The codes released here as Open Source comes from my works from various mod project that I have worked on. Feel free to use these codes as part of your own code.
 
 #### If you require further assistance, refer to the [Discord Server](https://discord.gg/waHpcSHZwb).
 
