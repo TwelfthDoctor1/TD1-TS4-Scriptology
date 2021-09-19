@@ -7,7 +7,7 @@
                   <Tunable type="int" class="Tunable" allow_none="False" description="Object Instance ID of the Object." Deprecated="False" group="General" pack_safe="True" />
                 </TunableList>
 
-                <TunableEnum type="Pack" name="pack" class="TunableEnumEntry" default="BASE_GAME" display="Base Game" static_entries="sims4.common.Pack" description="The pack used to test." Deprecated="False" group="General" />
+                <TunableEnum type="Pack" name="pack" class="TunableEnumEntry" default="BASE_GAME" display="Pack" static_entries="sims4.common.Pack" description="The pack used to test." Deprecated="False" group="General" />
                 
                 <TunableList name="affordances" class="TunableList" description="List of interactions that are to be injected into the Object List." display="Affordances" Deprecated="False" group="General">
                   <Tunable type="interaction" class="TunableReference" allow_none="False" description="Instance ID of the Interaction." Deprecated="False" group="General" pack_safe="True" />
