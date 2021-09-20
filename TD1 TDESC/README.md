@@ -8,10 +8,13 @@ The TD1 TDESC holds all modding documentation to TD1 Mods ranging from Modules t
 
 * DevAccessPanel
 * SharedTunings
+* TMS
 
 ### DevAccessPanel
 
-WIP
+Most of the new, work in progress and currently used scripts are in the DevAccessPanel. These scripts are the foundation for other mods such as the Startup Notification and the Config Handler.
+
+Mods derived from the DevAccessPanel should cross-reference the DevAccessPanel for TDESC information such the Travel To Venue Standalone Mod. However other mods that uses certain elements from this group of TDESCs can also be cross referenced here.
 
 ### SharedTunings
 
@@ -37,3 +40,6 @@ The Older Version Injectors only allows one injection per instance, thus using u
 
 The Newer Version Injectors allows for mutiple injections on one instance therefore saving up on multiple XML Instances (though it is always recommended to classify them through instances). The TDESCs for these Injectors follow this context: `TD1[InjectorName]V[VersionNumber].tdesc OR TD1[InjectorName][VersionNumber].tdesc (Example: TD1LootIntInjectorV2.tdesc | TD1AffordanceInjector3.tdesc)`
 
+### TMS
+
+The TMS TDESC caters to the Teleport Memory System Mod. Parts of its scripts are derived from the DevAccessPanel, if there are any modules referenced in XML but not in TDESC, do check the DevAccessPanel for said information (if available).
