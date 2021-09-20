@@ -24,3 +24,16 @@ The SharedTunings TDESC is a compile of Documentation for scripts that are used 
 ```
 
 In the case of `module`, there are two paths that leads to the script. Depending on the mod, the path may be [FRAMEWORK_NAME].FrameworkLib or directly on the base script folder. FrameworkLib is currently used by the DevAccessPanel and TMS whilst other mods use the base script folder method. It is recommended to check through the XML scripts that I have created for the mod or by decompiling the TS4SCRIPT to verify the folder path.
+
+### Usage of Injectors
+
+Certain injectors have a V1 and a V2 (or V2 and a V3) which may lead to confusion. It is recommended to use the **Newer Version** as the newer version supports multiple instances into one instance through `TunableList-TunableTuple Iteration <L><U>`. The older version may be removed in later updates but will remain for compatibility with some XML scripts that use the older version.
+
+#### Older Version Injectors
+
+The Older Version Injectors only allows one injection per instance, thus using up a lot of XML Instances. **If you are only planning to use one instance, it is recommended to use this otherwise please use the newer version that supports multiple injections on one instance.** Otherwise they should provide the same functions and Tunables as its newer counterparts (unless I forgot to add them in). The older version TDESCs are referenced through `TD1[InjectorName].tdesc (Example: TD1LootBuffIntInjector.tdesc)`.
+
+#### Newer Version Injectors
+
+The Newer Version Injectors allows for mutiple injections on one instance therefore saving up on multiple XML Instances (though it is always recommended to classify them through instances). The TDESCs for these Injectors follow this context: `TD1[InjectorName]V[VersionNumber].tdesc OR TD1[InjectorName][VersionNumber].tdesc (Example: TD1LootIntInjectorV2.tdesc | Td1AffordanceInjector3.tdesc)`
+
