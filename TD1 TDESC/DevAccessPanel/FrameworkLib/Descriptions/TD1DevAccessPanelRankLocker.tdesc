@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<TuningRoot>
+    <Instance instance_type="snippet" class="TD1DevAccessPanelRankLocker" module="DevAccessPanel.FrameworkLib.TD1_DevAccessPanel_RankLocker" description="The RankLocker is used to override the decay rate of the specified RankStatistic. Requires a Config Module. [FRAMEWORK_NAME] refers to the developer version of a mod name. Examples include: DevAccessPanel, TMS, ChooseYourOwn, etc." instance_needs_reference="True" instance_subclasses_only="False" path="TD1 TDESC\DevAccessPanel\FrameworkLib\Descriptions" use_guid_for_reference="True">
+        <TunableList name="rank_decay_modifier" class="TunableMapping" display="Rank Decay Modifier" Deprecated="False" filter="0" group="General">
+            <TunableTuple class="TunableTuple" Deprecated="False" filter="0" group="General">
+                <TunableEnum type="Pack" name="pack" class="TunableEnumEntry" default="BASE_GAME" display="Pack" static_entries="sims4-common.Pack" description="The pack used to test." Deprecated="False" filter="0" group="General" />
+
+                <TunableList name="rank_modifier" class="TunableMapping" display="Rank Modifier" Deprecated="False" filter="0" group="General">
+                    <TunableTuple class="TunableTuple" Deprecated="False" filter="0" group="General">
+                        <Tunable type="str" name="config_option" class="Tunable" description="The configuration that is the determinant of the rank decay." display="Config Option" Deprecated="False" filter="0" group="General" />
+
+                        <TunableList name="stat_list" class="TunableMapping" description="Stat &amp; Stat Modifiers to determine the final result." display="Stat List" Deprecated="False" filter="0" group="General">
+                            <TunableTuple class="TunableTuple" Deprecated="False" filter="0" group="General">
+                                <Tunable type="statistic" name="rank_stat" class="TunableReference" description="The Instance ID of the RankStatistic." display="Rank Stat" Deprecated="False" filter="0" group="General" />
+
+                                <TunableTuple name="stat_modifier" class="TunableTuple" description="Stat Modifiers to determine decay value." display="Stat Modifier" Deprecated="False" filter="0" group="General">
+                                    <Tunable type="float" name="decay_rate" class="TunableRange" description="Final value of decay when config is True" display="Decay Rate" default="0.001" Deprecated="False" filter="0" group="General" />
+                                </TunableTuple>
+                            </TunableTuple>
+                        </TunableList>
+                    </TunableTuple>
+                </TunableList>
+            </TunableTuple>
+        </TunableList>
+    </Instance>
+</TuningRoot>
