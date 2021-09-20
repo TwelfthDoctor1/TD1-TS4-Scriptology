@@ -8,7 +8,7 @@
             <TunableList name="schedule_entries" class="TunableList" display="Schedule Entries" description="A list of event schedules. Each event is a mapping of days of the&#xA;week to a start_time and duration." Deprecated="False" filter="0" group="General">
                 <TunableTuple class="TunableScheduleEntry" description="A schedule. Define availability for days of the week. For the set of&#xA;specified days, define an hour of the day and a duration, in hours.&#xA;Optionally, specified if the start time is random within the tuned window." Deprecated="False" filter="0" group="General">
                     <TunableTuple name="days_available" class="TunableAvailableDays" display="Days Available" description="Which days of the week to include" Deprecated="False" filter="0" group="General">
-                        <Tunable type="bool" name="0 SUNDAY" class="Tunable" default="False" display="0 Sunday"Deprecated="False" filter="0" group="General" />
+                        <Tunable type="bool" name="0 SUNDAY" class="Tunable" default="False" display="0 Sunday" Deprecated="False" filter="0" group="General" />
                         <Tunable type="bool" name="1 MONDAY" class="Tunable" default="False" display="1 Monday" Deprecated="False" filter="0" group="General" />
                         <Tunable type="bool" name="2 TUESDAY" class="Tunable" default="False" display="2 Tuesday" Deprecated="False" filter="0" group="General" />
                         <Tunable type="bool" name="3 WEDNESDAY" class="Tunable" default="False" display="3 Wednesday" Deprecated="False" filter="0" group="General" />
@@ -16,11 +16,11 @@
                         <Tunable type="bool" name="5 FRIDAY" class="Tunable" default="False" display="5 Friday" Deprecated="False" filter="0" group="General" />
                         <Tunable type="bool" name="6 SATURDAY" class="Tunable" default="False" display="6 Saturday" Deprecated="False" filter="0" group="General" />
                     </TunableTuple>
-                    <Tunable type="float" name="duration" class="Tunable" default="1.0" display="Duration"description="Duration of this work session in hours." tuning_state="NeedsTuning" Deprecated="False" filter="0" group="General" />
+                    <Tunable type="float" name="duration" class="Tunable" default="1.0" display="Duration" description="Duration of this work session in hours." tuning_state="NeedsTuning" Deprecated="False" filter="0" group="General" />
                     <Tunable type="bool" name="random_start" class="Tunable" default="False" display="Random Start" description="If checked, this schedule will have a random start time in the tuned&#xA;window each time." Deprecated="False" filter="0" group="General" />
                     <TunableEnum type="CareerShiftType" name="schedule_shift_type" class="TunableEnumEntry" default="ALL_DAY" display="Schedule Shift Type" static_entries="careers-career_enums.CareerShiftType" description="Shift Type for the schedule, this will be used for validations." Deprecated="False" filter="0" group="General" />
                     <Tunable type="situation" name="situation" class="TunableReference" display="Situation" description="The situation to start according to the tuned schedule." allow_none="False" Deprecated="False" filter="0" group="General" />
-                    <TunableTuple name="start_time" class="TunableTimeOfDay" display="Start Time"description="An Hour(24Hr) and Minute representing a time relative to the beginning of a day." Deprecated="False" filter="0" group="General">
+                    <TunableTuple name="start_time" class="TunableTimeOfDay" display="Start Time" description="An Hour(24Hr) and Minute representing a time relative to the beginning of a day." Deprecated="False" filter="0" group="General">
                         <Tunable type="int" name="hour" class="TunableRange" default="9" display="Hour" min="0" max="23" description="Hour of the day" tuning_state="NeedsTuning" Deprecated="False" filter="0" group="General" />
                         <Tunable type="int" name="minute" class="TunableRange" default="0" display="Minute" min="0" max="59" description="Minute of Hour" tuning_state="NeedsTuning" Deprecated="False" filter="0" group="General" />
                     </TunableTuple>
@@ -42,7 +42,7 @@
                     </TunableTuple>
                     <Tunable type="float" name="duration" class="Tunable" default="1.0" display="Duration" description="Duration of this work session in hours." tuning_state="NeedsTuning" Deprecated="False" filter="0" group="General" />
                     <Tunable type="bool" name="random_start" class="Tunable" default="False" display="Random Start" description="If checked, this schedule will have a random start time in the tuned&#xA;window each time." Deprecated="False" filter="0" group="General" />
-                    <TunableEnum type="CareerShiftType" name="schedule_shift_type" class="TunableEnumEntry" default="ALL_DAY" display="Schedule Shift Type"static_entries="careers-career_enums.CareerShiftType" description="Shift Type for the schedule, this will be used for validations." Deprecated="False" filter="0" group="General" />
+                    <TunableEnum type="CareerShiftType" name="schedule_shift_type" class="TunableEnumEntry" default="ALL_DAY" display="Schedule Shift Type" static_entries="careers-career_enums.CareerShiftType" description="Shift Type for the schedule, this will be used for validations." Deprecated="False" filter="0" group="General" />
                     <Tunable type="situation" name="situation" class="TunableReference" display="Situation" description="The situation to start according to the tuned schedule." allow_none="False" Deprecated="False" filter="0" group="General" />
                     <TunableTuple name="start_time" class="TunableTimeOfDay" display="Start Time" description="An Hour(24Hr) and Minute representing a time relative to the beginning of a day." Deprecated="False" filter="0" group="General">
                         <Tunable type="int" name="hour" class="TunableRange" default="9" display="Hour" min="0" max="23" description="Hour of the day" tuning_state="NeedsTuning" Deprecated="False" filter="0" group="General" />
