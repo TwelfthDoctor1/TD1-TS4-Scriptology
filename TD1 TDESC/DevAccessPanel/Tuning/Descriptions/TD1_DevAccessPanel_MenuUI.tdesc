@@ -3,29 +3,269 @@
 <TuningRoot>
     <Module name="DevAccessPanel.CoreLib.TD1_DevAccessPanel_MenuUI">
         <Class name="MenuUIBaseIcons">
-            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_SETTINGS_ENABLED" display="UI Icon Settings Enabled" description="Base UI Icon for SETTINGS_ENABLED" default="" Deprecated="False" filter="0" group="General" />
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_SETTINGS_ENABLED" display="UI Icon Settings Enabled" description="Base UI Icon for SETTINGS_ENABLED" default="" Deprecated="False" filter="0" group="General">
+                <TunableTuple name="lifestyle_brand" class="TunableLifestyleBrandIconFactory" display="Lifestyle Brand" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="The Participant who owns the lifestyle brand we want to use." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="participant" class="TunableParticipantTypeIconFactory" display="Participant" description="The Sim who's thumbnail will be used." Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantType" class="TunableEnumEntry" default="Invalid" static_entries="interactions.ParticipantType" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="privacy" class="TunablePrivacyIconFactory" display="Privacy" description="Search an interaction's privacy liability to find violating Sims&#xA;and randomly select one to display an icon of." Deprecated="False" filter="0" group="General" />
+                <TunableTuple name="resource_key" class="TunableIconFactory" display="Resource Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General">
+                    <Tunable type="ResourceKey" name="key" class="TunableIcon" default="None" display="Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General" resource_types="0x2f7d0004" />
+                </TunableTuple>
+                <TunableTuple name="tradition" class="TunableHolidayIconFactory" display="Tradition" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="We use this participant's holiday tracker to get the icon." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+            </TunableVariant>
 
-            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_SETTINGS_DISABLED" display="UI Icon Settings Disabled" description="Base UI Icon for SETTINGS_DISABLED" default="" Deprecated="False" filter="0" group="General" />
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_SETTINGS_DISABLED" display="UI Icon Settings Disabled" description="Base UI Icon for SETTINGS_DISABLED" default="" Deprecated="False" filter="0" group="General">
+                <TunableTuple name="lifestyle_brand" class="TunableLifestyleBrandIconFactory" display="Lifestyle Brand" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="The Participant who owns the lifestyle brand we want to use." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="participant" class="TunableParticipantTypeIconFactory" display="Participant" description="The Sim who's thumbnail will be used." Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantType" class="TunableEnumEntry" default="Invalid" static_entries="interactions.ParticipantType" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="privacy" class="TunablePrivacyIconFactory" display="Privacy" description="Search an interaction's privacy liability to find violating Sims&#xA;and randomly select one to display an icon of." Deprecated="False" filter="0" group="General" />
+                <TunableTuple name="resource_key" class="TunableIconFactory" display="Resource Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General">
+                    <Tunable type="ResourceKey" name="key" class="TunableIcon" default="None" display="Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General" resource_types="0x2f7d0004" />
+                </TunableTuple>
+                <TunableTuple name="tradition" class="TunableHolidayIconFactory" display="Tradition" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="We use this participant's holiday tracker to get the icon." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+            </TunableVariant>
 
-            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_SETTINGS_DISALLOW" display="UI Icon Settings Disallow" description="Base UI Icon for SETTINGS_DISALLOW" default="" Deprecated="False" filter="0" group="General" />
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_SETTINGS_DISALLOW" display="UI Icon Settings Disallow" description="Base UI Icon for SETTINGS_DISALLOW" default="" Deprecated="False" filter="0" group="General">
+                <TunableTuple name="lifestyle_brand" class="TunableLifestyleBrandIconFactory" display="Lifestyle Brand" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="The Participant who owns the lifestyle brand we want to use." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="participant" class="TunableParticipantTypeIconFactory" display="Participant" description="The Sim who's thumbnail will be used." Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantType" class="TunableEnumEntry" default="Invalid" static_entries="interactions.ParticipantType" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="privacy" class="TunablePrivacyIconFactory" display="Privacy" description="Search an interaction's privacy liability to find violating Sims&#xA;and randomly select one to display an icon of." Deprecated="False" filter="0" group="General" />
+                <TunableTuple name="resource_key" class="TunableIconFactory" display="Resource Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General">
+                    <Tunable type="ResourceKey" name="key" class="TunableIcon" default="None" display="Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General" resource_types="0x2f7d0004" />
+                </TunableTuple>
+                <TunableTuple name="tradition" class="TunableHolidayIconFactory" display="Tradition" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="We use this participant's holiday tracker to get the icon." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+            </TunableVariant>
 
-            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_MENU_LOCKED" display="UI Icon Menu Locked" description="Base UI Icon for MENU_LOCKED" default="" Deprecated="False" filter="0" group="General" />
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_MENU_LOCKED" display="UI Icon Menu Locked" description="Base UI Icon for MENU_LOCKED" default="" Deprecated="False" filter="0" group="General">
+                <TunableTuple name="lifestyle_brand" class="TunableLifestyleBrandIconFactory" display="Lifestyle Brand" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="The Participant who owns the lifestyle brand we want to use." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="participant" class="TunableParticipantTypeIconFactory" display="Participant" description="The Sim who's thumbnail will be used." Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantType" class="TunableEnumEntry" default="Invalid" static_entries="interactions.ParticipantType" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="privacy" class="TunablePrivacyIconFactory" display="Privacy" description="Search an interaction's privacy liability to find violating Sims&#xA;and randomly select one to display an icon of." Deprecated="False" filter="0" group="General" />
+                <TunableTuple name="resource_key" class="TunableIconFactory" display="Resource Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General">
+                    <Tunable type="ResourceKey" name="key" class="TunableIcon" default="None" display="Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General" resource_types="0x2f7d0004" />
+                </TunableTuple>
+                <TunableTuple name="tradition" class="TunableHolidayIconFactory" display="Tradition" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="We use this participant's holiday tracker to get the icon." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+            </TunableVariant>
 
-            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_MENU_MISSING" display="UI Icon Menu Missing" description="Base UI Icon for MENU_MISSING" default="" Deprecated="False" filter="0" group="General" />
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_MENU_MISSING" display="UI Icon Menu Missing" description="Base UI Icon for MENU_MISSING" default="" Deprecated="False" filter="0" group="General">
+                <TunableTuple name="lifestyle_brand" class="TunableLifestyleBrandIconFactory" display="Lifestyle Brand" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="The Participant who owns the lifestyle brand we want to use." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="participant" class="TunableParticipantTypeIconFactory" display="Participant" description="The Sim who's thumbnail will be used." Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantType" class="TunableEnumEntry" default="Invalid" static_entries="interactions.ParticipantType" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="privacy" class="TunablePrivacyIconFactory" display="Privacy" description="Search an interaction's privacy liability to find violating Sims&#xA;and randomly select one to display an icon of." Deprecated="False" filter="0" group="General" />
+                <TunableTuple name="resource_key" class="TunableIconFactory" display="Resource Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General">
+                    <Tunable type="ResourceKey" name="key" class="TunableIcon" default="None" display="Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General" resource_types="0x2f7d0004" />
+                </TunableTuple>
+                <TunableTuple name="tradition" class="TunableHolidayIconFactory" display="Tradition" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="We use this participant's holiday tracker to get the icon." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+            </TunableVariant>
 
-            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_MENU_UNKNOWN" display="UI Icon Menu Unknown" description="Base UI Icon for MENU_UNKNOWN" default="" Deprecated="False" filter="0" group="General" />
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_MENU_UNKNOWN" display="UI Icon Menu Unknown" description="Base UI Icon for MENU_UNKNOWN" default="" Deprecated="False" filter="0" group="General">
+                <TunableTuple name="lifestyle_brand" class="TunableLifestyleBrandIconFactory" display="Lifestyle Brand" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="The Participant who owns the lifestyle brand we want to use." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="participant" class="TunableParticipantTypeIconFactory" display="Participant" description="The Sim who's thumbnail will be used." Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantType" class="TunableEnumEntry" default="Invalid" static_entries="interactions.ParticipantType" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="privacy" class="TunablePrivacyIconFactory" display="Privacy" description="Search an interaction's privacy liability to find violating Sims&#xA;and randomly select one to display an icon of." Deprecated="False" filter="0" group="General" />
+                <TunableTuple name="resource_key" class="TunableIconFactory" display="Resource Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General">
+                    <Tunable type="ResourceKey" name="key" class="TunableIcon" default="None" display="Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General" resource_types="0x2f7d0004" />
+                </TunableTuple>
+                <TunableTuple name="tradition" class="TunableHolidayIconFactory" display="Tradition" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="We use this participant's holiday tracker to get the icon." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+            </TunableVariant>
 
-            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_MENU_BACK" display="UI Icon Menu Back" description="Base UI Icon for MENU_BACK" default="" Deprecated="False" filter="0" group="General" />
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_MENU_BACK" display="UI Icon Menu Back" description="Base UI Icon for MENU_BACK" default="" Deprecated="False" filter="0" group="General">
+                <TunableTuple name="lifestyle_brand" class="TunableLifestyleBrandIconFactory" display="Lifestyle Brand" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="The Participant who owns the lifestyle brand we want to use." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="participant" class="TunableParticipantTypeIconFactory" display="Participant" description="The Sim who's thumbnail will be used." Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantType" class="TunableEnumEntry" default="Invalid" static_entries="interactions.ParticipantType" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="privacy" class="TunablePrivacyIconFactory" display="Privacy" description="Search an interaction's privacy liability to find violating Sims&#xA;and randomly select one to display an icon of." Deprecated="False" filter="0" group="General" />
+                <TunableTuple name="resource_key" class="TunableIconFactory" display="Resource Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General">
+                    <Tunable type="ResourceKey" name="key" class="TunableIcon" default="None" display="Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General" resource_types="0x2f7d0004" />
+                </TunableTuple>
+                <TunableTuple name="tradition" class="TunableHolidayIconFactory" display="Tradition" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="We use this participant's holiday tracker to get the icon." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+            </TunableVariant>
 
-            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_MENU_EXIT" display="UI Icon Menu Exit" description="Base UI Icon for MENU_EXIT" default="" Deprecated="False" filter="0" group="General" />
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_MENU_EXIT" display="UI Icon Menu Exit" description="Base UI Icon for MENU_EXIT" default="" Deprecated="False" filter="0" group="General">
+                <TunableTuple name="lifestyle_brand" class="TunableLifestyleBrandIconFactory" display="Lifestyle Brand" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="The Participant who owns the lifestyle brand we want to use." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="participant" class="TunableParticipantTypeIconFactory" display="Participant" description="The Sim who's thumbnail will be used." Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantType" class="TunableEnumEntry" default="Invalid" static_entries="interactions.ParticipantType" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="privacy" class="TunablePrivacyIconFactory" display="Privacy" description="Search an interaction's privacy liability to find violating Sims&#xA;and randomly select one to display an icon of." Deprecated="False" filter="0" group="General" />
+                <TunableTuple name="resource_key" class="TunableIconFactory" display="Resource Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General">
+                    <Tunable type="ResourceKey" name="key" class="TunableIcon" default="None" display="Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General" resource_types="0x2f7d0004" />
+                </TunableTuple>
+                <TunableTuple name="tradition" class="TunableHolidayIconFactory" display="Tradition" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="We use this participant's holiday tracker to get the icon." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+            </TunableVariant>
 
-            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_MENU_PLACEHOLDER" display="UI Icon Menu Placeholder" description="Base UI Icon for MENU_PLACEHOLDER" default="" Deprecated="False" filter="0" group="General" />
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_MENU_PLACEHOLDER" display="UI Icon Menu Placeholder" description="Base UI Icon for MENU_PLACEHOLDER" default="" Deprecated="False" filter="0" group="General">
+                <TunableTuple name="lifestyle_brand" class="TunableLifestyleBrandIconFactory" display="Lifestyle Brand" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="The Participant who owns the lifestyle brand we want to use." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="participant" class="TunableParticipantTypeIconFactory" display="Participant" description="The Sim who's thumbnail will be used." Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantType" class="TunableEnumEntry" default="Invalid" static_entries="interactions.ParticipantType" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="privacy" class="TunablePrivacyIconFactory" display="Privacy" description="Search an interaction's privacy liability to find violating Sims&#xA;and randomly select one to display an icon of." Deprecated="False" filter="0" group="General" />
+                <TunableTuple name="resource_key" class="TunableIconFactory" display="Resource Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General">
+                    <Tunable type="ResourceKey" name="key" class="TunableIcon" default="None" display="Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General" resource_types="0x2f7d0004" />
+                </TunableTuple>
+                <TunableTuple name="tradition" class="TunableHolidayIconFactory" display="Tradition" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="We use this participant's holiday tracker to get the icon." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+            </TunableVariant>
 
-            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_SETTINGS_VARIATION" display="UI Icon Settings Variation" description="Base UI Icon for SETTINGS_ENABLED" default="" Deprecated="False" filter="0" group="General" />
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_SETTINGS_VARIATION" display="UI Icon Settings Variation" description="Base UI Icon for SETTINGS_ENABLED" default="" Deprecated="False" filter="0" group="General">
+                <TunableTuple name="lifestyle_brand" class="TunableLifestyleBrandIconFactory" display="Lifestyle Brand" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="The Participant who owns the lifestyle brand we want to use." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="participant" class="TunableParticipantTypeIconFactory" display="Participant" description="The Sim who's thumbnail will be used." Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantType" class="TunableEnumEntry" default="Invalid" static_entries="interactions.ParticipantType" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="privacy" class="TunablePrivacyIconFactory" display="Privacy" description="Search an interaction's privacy liability to find violating Sims&#xA;and randomly select one to display an icon of." Deprecated="False" filter="0" group="General" />
+                <TunableTuple name="resource_key" class="TunableIconFactory" display="Resource Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General">
+                    <Tunable type="ResourceKey" name="key" class="TunableIcon" default="None" display="Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General" resource_types="0x2f7d0004" />
+                </TunableTuple>
+                <TunableTuple name="tradition" class="TunableHolidayIconFactory" display="Tradition" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="We use this participant's holiday tracker to get the icon." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+            </TunableVariant>
 
-            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_SETTINGS_MISSING" display="UI Icon Settings Missing" description="Base UI Icon for SETTINGS_MISSING" default="" Deprecated="False" filter="0" group="General" />
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_SETTINGS_MISSING" display="UI Icon Settings Missing" description="Base UI Icon for SETTINGS_MISSING" default="" Deprecated="False" filter="0" group="General">
+                <TunableTuple name="lifestyle_brand" class="TunableLifestyleBrandIconFactory" display="Lifestyle Brand" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="The Participant who owns the lifestyle brand we want to use." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="participant" class="TunableParticipantTypeIconFactory" display="Participant" description="The Sim who's thumbnail will be used." Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantType" class="TunableEnumEntry" default="Invalid" static_entries="interactions.ParticipantType" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="privacy" class="TunablePrivacyIconFactory" display="Privacy" description="Search an interaction's privacy liability to find violating Sims&#xA;and randomly select one to display an icon of." Deprecated="False" filter="0" group="General" />
+                <TunableTuple name="resource_key" class="TunableIconFactory" display="Resource Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General">
+                    <Tunable type="ResourceKey" name="key" class="TunableIcon" default="None" display="Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General" resource_types="0x2f7d0004" />
+                </TunableTuple>
+                <TunableTuple name="tradition" class="TunableHolidayIconFactory" display="Tradition" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="We use this participant's holiday tracker to get the icon." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+            </TunableVariant>
 
-            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_SETTINGS_UNKNOWN" display="UI Icon Settings Unknown" description="Base UI Icon for SETTINGS_UNKNOWN" default="" Deprecated="False" filter="0" group="General" />
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_SETTINGS_UNKNOWN" display="UI Icon Settings Unknown" description="Base UI Icon for SETTINGS_UNKNOWN" default="" Deprecated="False" filter="0" group="General">
+                <TunableTuple name="lifestyle_brand" class="TunableLifestyleBrandIconFactory" display="Lifestyle Brand" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="The Participant who owns the lifestyle brand we want to use." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="participant" class="TunableParticipantTypeIconFactory" display="Participant" description="The Sim who's thumbnail will be used." Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantType" class="TunableEnumEntry" default="Invalid" static_entries="interactions.ParticipantType" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+                <TunableTuple name="privacy" class="TunablePrivacyIconFactory" display="Privacy" description="Search an interaction's privacy liability to find violating Sims&#xA;and randomly select one to display an icon of." Deprecated="False" filter="0" group="General" />
+                <TunableTuple name="resource_key" class="TunableIconFactory" display="Resource Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General">
+                    <Tunable type="ResourceKey" name="key" class="TunableIcon" default="None" display="Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General" resource_types="0x2f7d0004" />
+                </TunableTuple>
+                <TunableTuple name="tradition" class="TunableHolidayIconFactory" display="Tradition" Deprecated="False" filter="0" group="General">
+                    <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="We use this participant's holiday tracker to get the icon." Deprecated="False" filter="0" group="General" unique_entries="true">
+                        <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                    </TunableList>
+                </TunableTuple>
+            </TunableVariant>
         </Class>
 
         <Class name="MenuUIBaseIconEnums" enum_locked="False">
