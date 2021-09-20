@@ -6,6 +6,14 @@ Currently WIP. TDESCs will be released slowly.
 
 The TD1 TDESC holds all modding documentation to TD1 Mods ranging from Modules to Injectors, each explaining on how it works and how it should be used.
 
+## Using TDESCs
+
+You need a TDESC viewer to read the TDESCs with ease. You don't want to read XML don't you?
+
+Download TDESC Viewer: [Windows (Scumbumbo)](https://modthesims.info/d/618199/ts4-tuning-description-browser-windows-only.html) | [macOS (Lebbion)](https://modthesims.info/d/649060/tuning-description-browser-for-macos.html)
+
+To view the TDESCs, unzip and put the TDESCs into your TDESC Root Folder. For macOS, **do not unzip the archive**, instead use the application to select a new TDESC Library.
+
 ### List of TDESCs
 
 * DevAccessPanel
