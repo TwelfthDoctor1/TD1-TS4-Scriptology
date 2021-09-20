@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<TuningRoot>
+    <Instance instance_type="snippet" class="TD1[FRAMEWORK_NAME]CheatSetter" module="[FRAMEWORK_NAME].FrameworkLib.TD1_[FRAMEWORK_NAME]_CheatSetter OR TD1_[FRAMEWORK_NAME]_CheatSetter" description="The CheatSetter is used to push interactions into the Cheat/Debug Pie Menu or vice versa through overridding the cheat and debug tunables. Requires a Config Module. [FRAMEWORK_NAME] refers to the developer version of a mod name. Examples include: DevAccessPanel, TMS, ChooseYourOwn, etc." instance_needs_reference="True" instance_subclasses_only="False" path="TD1 TDESC\Shared Tunings\Descriptions" use_guid_for_reference="True">
+        <Tunable type="str" name="config_option" class="Tunable" description="The configuration option that relies on this system." display="Config Option" Deprecated="False" filter="0" group="General"/>
+
+        <TunableList name="cheat_setter" class="TunableList" display="Cheat Setter" Deprecated="False" filter="0" group="General">
+            <TunableTuple class="TunableTuple" Deprecated="False" filter="0" group="General">
+                <Tunable type="bool" name="cheat" class="Tunable" description="Modifier if the Cheat Tunable should ultimately be True or False." default="False" display="Cheat" Deprecated="False" filter="0" group="General" />
+
+                <Tunable type="bool" name="debug" class="Tunable" description="Modifier if the Debug Tunable should ultimately be True or False." default="False" display="Debug" Deprecated="False" filter="0" group="General" />
+
+                <TunableList name="affordances" class="TunableList" description="The List of affordance to be tuned." display="Affordances" Deprecated="False" filter="0" group="General">
+                    <Tunable type="interaction" class="TunableReference" description="The Affordance to be tuned." pack_safe="True" Deprecated="False" filter="0" group="General" />
+                </TunableList>
+            </TunableTuple>
+        </TunableList>
+    </Instance>
+</TuningRoot>

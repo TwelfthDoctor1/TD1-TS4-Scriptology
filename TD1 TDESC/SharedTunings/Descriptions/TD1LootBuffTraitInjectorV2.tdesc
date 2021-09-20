@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<TuningRoot>
+    <Instance instance_type="snippet" class="TD1[FRAMEWORK_NAME]LootBuffInjectorV2" module="[FRAMEWORK_NAME].FrameworkLib.TD1_[FRAMEWORK_NAME]_Add_Buff_Loot_Handler OR TD1_[FRAMEWORK_NAME]_Add_Buff_Loot_Handler" description="The LootBuff/Trait Injector V2 is used to inject or replace buff and/or trait tunables on the specified buff(s) and/or trait(s). [FRAMEWORK_NAME] refers to the developer version of a mod name. Examples include: DevAccessPanel, TMS, ChooseYourOwn, etc." instance_needs_reference="True" instance_subclasses_only="False" path="TD1 TDESC\Shared Tunings\Descriptions" use_guid_for_reference="True">
+        <TunableList name="buff_injector" class="TunableList" description="Lists to inject to the specified buffs." display="Buff Injector" Deprecated="False" filter="0" group="General">
+            <TunableTuple class="TunableTuple" description="The data to be injected." Deprecated="False" filter="0" group="General">
+                <TunableList name="buff_reference" class="TunableList" description="The specified buffs to be injected." display="Buff Reference" Deprecated="False" filter="0" group="General">
+                    <Tunable type="buff" class="TunableReference" allow_none="True" description="The buff for the loots to inject into, only ONE buff can be used." Deprecated="False" group="General" pack_safe="True" />
+                </TunableList>
+
+                <TunableList name="loot_on_addition" class="TunableList" description="A list of loots on add to be injected onto the mentioned buff on load." display="Loot On Addition" Deprecated="False" filter="0" group="General">
+                    <Tunable type="loot_action" class="TunableReference" allow_none="False" Deprecated="False" pack_safe="True" filter="0" group="General" />
+                </TunableList>
+
+                <TunableList name="loot_on_instance" class="TunableList" description="A list of loots on instance to be injected onto the mentioned buff on load." display="Loot On Instance" Deprecated="False" filter="0" group="General">
+                    <Tunable type="loot_action" class="TunableReference" allow_none="False" Deprecated="False" pack_safe="True" filter="0" group="General" />
+                </TunableList>
+
+                <TunableList name="loot_on_removal" class="TunableList" description="A list of loots on removal to be injected onto the mentioned buff on load." display="Loot On Removal" Deprecated="False" filter="0" group="General">
+                    <Tunable type="loot_action" class="TunableReference" allow_none="False" Deprecated="False" pack_safe="True" filter="0" group="General" />
+                </TunableList>
+
+                <Tunable type="bool" name="replace_loot_on_addition" class="TunableReference" display="Replace Loot On Addition" description="Modifier to determine should the referenced buff loot_on_addition should be replaced." default="False" Deprecated="False" filter="0" group="General" />
+
+                <Tunable type="bool" name="replace_loot_on_instance" class="TunableReference" display="Replace Loot On Instance" description="Modifier to determine should the referenced buff loot_on_instance should be replaced." default="False" Deprecated="False" filter="0" group="General" />
+
+                <Tunable type="bool" name="replace_loot_on_removal" class="TunableReference" display="Replace Loot On Removal" description="Modifier to determine should the referenced buff loot_on_removal should be replaced." default="False" Deprecated="False" filter="0" group="General" />
+
+                <TunableEnum type="Pack" name="pack" class="TunableEnumEntry" default="BASE_GAME" display="Pack" static_entries="sims4-common.Pack" description="The pack used to test." Deprecated="False" group="General" />
+            </TunableTuple>
+        </TunableList>
+
+        <TunableList name="trait_injector" class="TunableList" description="Lists to inject to the specified traits." display="Trait Injector" Deprecated="False" filter="0" group="General">
+            <TunableTuple class="TunableTuple" description="Data to be injected." Deprecated="False" filter="0" group="General">
+                <Tunable type="trait" name="trait_reference" class="TunableReference" allow_none="True" description="The trait instance to reference from to add the respective buffs into the trait." Deprecated="False" filter="0" pack_safe="True" group="General" />
+
+                <TunableList name="buffs" class="TunableList" description="Buffs that should be added to the Sim whenever this trait is equipped." display="Buffs" Deprecated="False" filter="0" group="General">
+                    <Tunable type="buff" class="TunableBuffReference" pack_safe="True" Deprecated="False" filter="0" group="General" />
+                </TunableList>
+
+                <Tunable type="bool" name="is_npc_only" class="Tunable" description="If checked, this trait will get removed from Sims that have a home when the zone is loaded or whenever they switch to a household that has a home zone." display="Is NPC Only" default="False" Deprecated="False" filter="0" group="General" />
+
+                <TunableEnum type="Pack" name="pack" class="TunableEnumEntry" default="BASE_GAME" display="Pack" static_entries="sims4-common.Pack" description="The pack used to test." Deprecated="False" group="General" />
+            </TunableTuple>
+        </TunableList>
+    </Instance>
+</TuningRoot>
