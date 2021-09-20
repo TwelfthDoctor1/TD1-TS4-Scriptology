@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<TuningRoot>
+    <Instance instance_type="snippet" class="TD1TMSTestsInjector" module="TMS.FrameworkLib.TD1_TMS_TestInjector" description="The TestInjector is used to inject custom tests into interactions and test set instances. [FRAMEWORK_NAME] refers to the developer version of a mod name. Examples include: DevAccessPanel, TMS, ChooseYourOwn, etc." instance_needs_reference="True" instance_subclasses_only="False" path="TD1 TDESC\TMS\FrameworkLib\Descriptions" use_guid_for_reference="True">
+        <TunableList name="test_globals" class="TunableMapping" description="Test Globals data to be injected into an Interaction." display="Test Globals" Deprecated="False" filter="0" group="General">
+            <TunableTuple class="TunableTuple" Deprecated="False" filter="0" group="General">
+                <TunableList name="interaction_instance" class="TunableList" description="The list of interactions to be injected." display="Interaction Instance" Deprecated="False" filter="0" group="General">
+                    <Tunable type="interaction" class="TunableReference" description="The instance of the Interaction." Deprecated="False" filter="0" group="General" />
+                </TunableList>
+
+                <TunableTuple name="test_data" class="TunableTuple" description="The data that holds the test data." display="Test Data" Deprecated="False" filter="0" group="General">
+                    <TDescFragTag name="test_globals" class="TunableGlobalTestSet" display="Test Globals" description="A list of tests groups.  At least one must pass all its sub-tests to pass the TestSet. ORs of ANDs" filter="0" group="General" />
+
+                    <Tunable type="bool" name="replace_test_globals" class="Tunable" description="Modifier to determine whether the Global TestSet should be overridden." display="Replace Test Globals" default="False" Deprecated="False" filter="0" group="General" />
+
+                    <TunableEnum type="Pack" name="pack" class="TunableEnumEntry" default="BASE_GAME" display="Pack" static_entries="sims4-common.Pack" description="The pack used to test." Deprecated="False" group="General" />
+                </TunableTuple>
+            </TunableTuple>
+        </TunableList>
+
+        <TunableList name="interaction_tests" class="TunableMapping" description="Tests data to be injected into an Interaction." display="Interaction Tests" Deprecated="False" filter="0" group="General">
+            <TunableTuple class="TunableTuple" Deprecated="False" filter="0" group="General">
+                <TunableList name="interaction_instance" class="TunableList" description="The list of interactions to be injected." display="Interaction Instance" Deprecated="False" filter="0" group="General">
+                    <Tunable type="interaction" class="TunableReference" description="The instance of the Interaction." Deprecated="False" filter="0" group="General" />
+                </TunableList>
+
+                <TunableTuple name="test_data" class="TunableTuple" description="The data that holds the test data." display="Test Data" Deprecated="False" filter="0" group="General">
+                    <TDescFragTag name="tests" class="TunableTestSet" display="Tests" description="A list of tests groups.  At least one must pass all its sub-tests to pass the TestSet. ORs of ANDs" filter="0" group="General" />
+
+                    <Tunable type="bool" name="replace_test" class="Tunable" description="Modifier to determine whether the Tests TestSet should be overridden." display="Replace Test" default="False" Deprecated="False" filter="0" group="General" />
+
+                    <TunableEnum type="Pack" name="pack" class="TunableEnumEntry" default="BASE_GAME" display="Pack" static_entries="sims4-common.Pack" description="The pack used to test." Deprecated="False" group="General" />
+                </TunableTuple>
+            </TunableTuple>
+        </TunableList>
+
+        <TunableList name="test_set_instance_tests" class="TunableMapping" description="Tests data to be injected into a TestSet." display="Test Set Instance Tests" Deprecated="False" filter="0" group="General">
+            <TunableTuple class="TunableTuple" Deprecated="False" filter="0" group="General">
+                <TunableList name="test_set_instance" class="TunableList" description="The list of TestSetInstances to be injected." display="Test Set Instance" Deprecated="False" filter="0" group="General">
+                    <Tunable type="test_set" class="TunableReference" description="The instance of the TestSet." Deprecated="False" filter="0" group="General" />
+                </TunableList>
+
+                <TunableTuple name="test_data" class="TunableTuple" description="The data that holds the test data." display="Test Data" Deprecated="False" filter="0" group="General">
+                    <TDescFragTag name="tests" class="TunableTestSet" display="Tests" description="A list of tests groups.  At least one must pass all its sub-tests to pass the TestSet. ORs of ANDs" filter="0" group="General" />
+
+                    <Tunable type="bool" name="replace_test" class="Tunable" description="Modifier to determine whether the Tests TestSet should be overridden." display="Replace Test" default="False" Deprecated="False" filter="0" group="General" />
+
+                    <TunableEnum type="Pack" name="pack" class="TunableEnumEntry" default="BASE_GAME" display="Pack" static_entries="sims4-common.Pack" description="The pack used to test." Deprecated="False" group="General" />
+                </TunableTuple>
+            </TunableTuple>
+        </TunableList>
+
+        <TunableList name="test_autonomous" class="TunableMapping" description="Test Autonomous data to be injected into an Interaction." display="Test Autonomous" Deprecated="False" filter="0" group="General">
+            <TunableTuple class="TunableTuple" Deprecated="False" filter="0" group="General">
+                <TunableList name="interaction_instance" class="TunableList" description="The list of interactions to be injected." display="Interaction Instance" Deprecated="False" filter="0" group="General">
+                    <Tunable type="interaction" class="TunableReference" description="The instance of the Interaction." Deprecated="False" filter="0" group="General" />
+                </TunableList>
+
+                <TunableTuple name="test_data" class="TunableTuple" description="The data that holds the test data." display="Test Data" Deprecated="False" filter="0" group="General">
+                    <TDescFragTag name="test_autonomous" class="TunableTestSet" display="Tests" description="A set of tests that are only run for interactions being considered by autonomy." filter="0" group="General" />
+
+                    <Tunable type="bool" name="replace_test_autonomous" class="Tunable" description="Modifier to determine whether the test_autonomous TestSet should be overridden." display="Replace Test Autonomous" default="False" Deprecated="False" filter="0" group="General" />
+
+                    <TunableEnum type="Pack" name="pack" class="TunableEnumEntry" default="BASE_GAME" display="Pack" static_entries="sims4-common.Pack" description="The pack used to test." Deprecated="False" group="General" />
+                </TunableTuple>
+            </TunableTuple>
+        </TunableList>
+    </Instance>
+</TuningRoot>

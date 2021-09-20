@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<TuningRoot>
+    <Instance instance_type="snippet" class="TD1TMSGoHereInteractionChanger" module="TMS.FrameworkLib.TD1_TMS_GoHereInt_Injector" description="The GoHereInt Changer is used to inject custom display_overrides onto an interaction. [FRAMEWORK_NAME] refers to the developer version of a mod name. Examples include: DevAccessPanel, TMS, ChooseYourOwn, etc." instance_needs_reference="True" instance_subclasses_only="False" path="TD1 TDESC\Shared Tunings\Descriptions" use_guid_for_reference="True">
+        <Tunable type="interaction" name="go_here_interaction_reference" class="TunableReference" description="The Instance ID of the specified Go Here Super Interaction." display="Go Here Interaction Reference" allow_none="False" Deprecated="False" filter="0" group="General"/>
+
+        <TunableList name="tested_display_overrides" class="TunableList" description="The tested display overrides to inject into the specified Go Here Super Interaction." display="Tested Display Overrides" Deprecated="False" filter="0" group="General">
+            <TunableTuple class="TunableTuple" Deprecated="False" filter="0" group="General">
+                <TunableVariant type="None" name="new_display_name" class="OptionalTunable" default="enabled" display="New Display Name" description="If enabled, we will override the display name. Sometimes&#xA;you might not want to do this, such as with crafting&#xA;interactions that show the recipe name." Deprecated="False" filter="0" group="General">
+                    <Tunable name="disabled" class="TunableExistance" display="Disabled" />
+                    <Tunable type="int" name="enabled" class="TunableLocalizedString" default="0x0" display="Enabled" description="The localized name of this interaction. it takes two tokens,&#xA;the actor (0) and target object (1) of the interaction." Deprecated="False" filter="0" group="General" />
+                </TunableVariant>
+
+                <TunableVariant type="None" name="new_display_tooltip" class="OptionalTunable" default="disabled" display="New Display Tooltip" description="Tooltip to show on this pie menu option." Deprecated="False" filter="0" group="General">
+                    <Tunable name="disabled" class="TunableExistance" display="Disabled" />
+                    <Tunable type="int" name="enabled" class="TunableLocalizedString" default="0x0" display="Enabled" description="A localized string that may use tokens." Deprecated="False" filter="0" group="General" />
+                </TunableVariant>
+
+                <Tunable type="pie_menu_category" name="new_pie_menu_category" class="TunableReference" display="New Pie Menu Category" description="Pie menu category to put interaction under." allow_none="True" Deprecated="False" filter="0" group="General" />
+
+                <TunableVariant type="None" name="new_pie_menu_icon" class="OptionalTunable" default="disabled" display="New Pie Menu Icon" description="If this display name overrides the default display name,&#xA;this will be the icon that is shown. If this is not tuned&#xA;then the default pie menu icon for this interaction will be&#xA;used." Deprecated="False" filter="0" group="General">
+                    <Tunable name="disabled" class="TunableExistance" display="Disabled" />
+
+                    <TunableVariant type="None" name="enabled" class="TunableIconVariant" default="resource_key" display="Enabled" description="The icon to display in the pie menu." Deprecated="False" filter="0" group="General">
+                        <TunableTuple name="lifestyle_brand" class="TunableLifestyleBrandIconFactory" display="Lifestyle Brand" Deprecated="False" filter="0" group="General">
+                            <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="The Participant who owns the lifestyle brand we want to use." Deprecated="False" filter="0" group="General" unique_entries="true">
+                                <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                            </TunableList>
+                        </TunableTuple>
+
+                        <TunableTuple name="participant" class="TunableParticipantTypeIconFactory" display="Participant" description="The Sim who's thumbnail will be used." Deprecated="False" filter="0" group="General">
+                            <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" Deprecated="False" filter="0" group="General" unique_entries="true">
+                                <TunableEnum type="ParticipantType" class="TunableEnumEntry" default="Invalid" static_entries="interactions.ParticipantType" Deprecated="False" filter="0" group="General" />
+                            </TunableList>
+                        </TunableTuple>
+
+                        <TunableTuple name="privacy" class="TunablePrivacyIconFactory" display="Privacy" description="Search an interaction's privacy liability to find violating Sims&#xA;and randomly select one to display an icon of." Deprecated="False" filter="0" group="General" />
+
+                        <TunableTuple name="resource_key" class="TunableIconFactory" display="Resource Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General">
+                            <Tunable type="ResourceKey" name="key" class="TunableIconAllPacks" default="None" display="Key" description="The icon image to be displayed." Deprecated="False" filter="0" group="General" pack_safe="True" resource_types="0x2f7d0004" />
+                        </TunableTuple>
+
+                        <TunableTuple name="tradition" class="TunableHolidayIconFactory" display="Tradition" Deprecated="False" filter="0" group="General">
+                            <TunableList name="participant_type" class="TunableEnumFlags" default="Actor" display="Participant Type" description="We use this participant's holiday tracker to get the icon." Deprecated="False" filter="0" group="General" unique_entries="true">
+                                <TunableEnum type="ParticipantTypeSingle" class="TunableEnumEntry" default="Actor" static_entries="interactions.ParticipantTypeSingle" Deprecated="False" filter="0" group="General" />
+                            </TunableList>
+                        </TunableTuple>
+                    </TunableVariant>
+                </TunableVariant>
+
+                <TunableVariant type="None" name="parent_name" class="OptionalTunable" default="disabled" display="Parent Name" description="If enabled, we will insert the name into this parent string&#xA;in the pie menu." Deprecated="False" filter="0" group="General">
+                    <Tunable name="disabled" class="TunableExistance" display="Disabled"/>
+
+                    <Tunable type="int" name="enabled" class="TunableLocalizedString" default="0x0" display="Enabled" description="The localized parent name of this interaction.&#xA;token 0 is actor, token 1 is normal pie name" Deprecated="False" filter="0" group="General" />
+                </TunableVariant>
+
+                <TdescFragTag name="test" class="TunableTestSet" display="Test" description="The test to run to see if the display_name can be overwritten&#xA;by this random choice." filter="0" group="General" />
+
+                <Tunable type="float" name="weight" class="Tunable" default="1" display="Weight" description="The weight to apply to this option when randomly selecting." tuning_state="NeedsTuning" Deprecated="False" filter="0" group="General" />
+            </TunableTuple>
+        </TunableList>
+    </Instance>
+</TuningRoot>
