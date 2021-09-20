@@ -1,5 +1,7 @@
 # TD1 Tuning Descriptions (TDESCs)
 
+![TD1 TDESC Info Picture](https://github.com/TwelfthDoctor1/TD1-TS4-Scriptology/blob/main/repo_images/TD1%20TDESC%20Picture.png)
+
 Currently WIP. TDESCs will be released slowly.
 
 The TD1 TDESC holds all modding documentation to TD1 Mods ranging from Modules to Injectors, each explaining on how it works and how it should be used.
