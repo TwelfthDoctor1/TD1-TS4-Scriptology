@@ -26,9 +26,9 @@
                 </TunableTuple>
 
                 <TunableTuple name="custom_distance_test" class="TD1TMSCustomDistanceTest" display="Custom Distance Test" description="A test that returns True if the obtained distance meet the tuned distance requirements and conditions." Deprecated="False" filter="0" group="General">
-                    <Tunable type="str" name="config_type" class="Tunable" default="" description="The Config Type to test for." display="Config Type" Deprecated="False" filter="0" group="General" />
+                    <Tunable type="str" name="config_type" class="Tunable" default="" description="The Config Type to pull numerical values from." display="Config Type" Deprecated="False" filter="0" group="General" />
 
-                    <TunableEnum type="Operator" name="comparison" class="TunableOperator" default="GREATER_OR_EQUAL" display="Comparison" static_entries="sims4-math.Operator" description="The comparison to perform against the value." Deprecated="False" filter="0" group="General" />
+                    <TunableEnum type="Operator" name="comparison" class="TunableOperator" default="GREATER_OR_EQUAL" display="Comparison" static_entries="sims4-math.Operator" description="The comparison to perform against the config option value." Deprecated="False" filter="0" group="General" />
 
                     <TunableVariant type="None" name="level_modifier" class="TunableVariant" default="no_modifier" display="Level Modifier" description="Determine how difference in levels affects distance. A modifier of&#xA;10, for example, would mean that the distance between two objects is&#xA;increased by 10 meters for every floor between them." Deprecated="False" filter="0" group="General">
                         <Tunable name="infinite" class="TunableExistance" display="Infinite" />
