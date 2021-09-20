@@ -253,7 +253,7 @@
                                 </TunableVariant>
                                 <TunableVariant type="None" name="gig_history_data" class="TunableVariant" default="gig_customer_name" display="Gig History Data"  description="The piece of data to fetch." Deprecated="False" filter="0" group="General">
                                     <Tunable name="gig_customer_name" class="TunableExistance" display="Gig Customer Name"  />
-                                    <Tunable name="gig_project_title" class="TunableExistance" display="Gig Project Title" >
+                                    <Tunable name="gig_project_title" class="TunableExistance" display="Gig Project Title" />
                                 </TunableVariant>
                                 <TunableEnum type="GigResult" name="max_gig_result" class="TunableEnumEntry" default="GREAT_SUCCESS" display="Max Gig Result"  static_entries="careers-career_enums.GigResult" description="The worst acceptable gig result to find." Deprecated="False" filter="0" group="General" />
                                 <TunableEnum type="GigResult" name="min_gig_result" class="TunableEnumEntry" default="CRITICAL_FAILURE" display="Min Gig Result"  static_entries="careers-career_enums.GigResult" description="The worst acceptable gig result to find." Deprecated="False" filter="0" group="General" />
@@ -744,9 +744,9 @@
                         <Tunable name="disabled" class="TunableExistance" display="Disabled"  />
                         <TdescFragTag name="enabled" class="TunableTestSet" display="Enabled"  description="A list of tests groups.  At least one must pass all its sub-&#xA;tests to pass the TestSet.&#xA;&#xA;ORs of ANDs" filter="0" group="General" />
                     </TunableVariant>
-                    <TunableEnum type="MenuUIBaseIconsEnums" name="base_icon_enabled" class="Tunable" default="MENU_MISSING" display="Base Icon Enabled" description="The base icon to use for enabled state if icon_enabled is unused." Deprecated="False" filter="0" group="General" />
-                    <TunableEnum type="MenuUIBaseIconsEnums" name="base_icon_disabled" class="Tunable" default="NONE" display="Base Icon Disabled" description="The base icon to use for enabled state if icon_disabled is unused." Deprecated="False" filter="0" group="General" />
-                    <TunableEnum type="MenuUIBaseIconsEnums" name="base_icon_locked" class="Tunable" default="MENU_LOCKED" display="Base Icon Locked" description="The base icon to use if the interaction is locked (failed test)." Deprecated="False" filter="0" group="General" />
+                    <TunableEnum type="MenuUIBaseIconsEnums" name="base_icon_enabled" class="Tunable" default="MENU_MISSING" display="Base Icon Enabled" description="The base icon to use for enabled state if icon_enabled is unused." static_entries="DevAccessPanel-CoreLib-TD1_DevAccessPanel_MenuUI.MenuUIBaseIconsEnums" Deprecated="False" filter="0" group="General" />
+                    <TunableEnum type="MenuUIBaseIconsEnums" name="base_icon_disabled" class="Tunable" default="NONE" display="Base Icon Disabled" description="The base icon to use for enabled state if icon_disabled is unused." static_entries="DevAccessPanel-CoreLib-TD1_DevAccessPanel_MenuUI.MenuUIBaseIconsEnums" Deprecated="False" filter="0" group="General" />
+                    <TunableEnum type="MenuUIBaseIconsEnums" name="base_icon_locked" class="Tunable" default="MENU_LOCKED" display="Base Icon Locked" description="The base icon to use if the interaction is locked (failed test)." static_entries="DevAccessPanel-CoreLib-TD1_DevAccessPanel_MenuUI.MenuUIBaseIconsEnums" Deprecated="False" filter="0" group="General" />
                 </TunableTuple>
                 <Tunable type="snippet" name="reference" class="TunableReference" display="Reference"  description="A reference to a DevAccessPanelMenuUIStructureSnippet tuning snippet." allow_none="False" Deprecated="False" filter="0" group="General" restrict="InteractionPickerItem" />
             </TunableVariant>
