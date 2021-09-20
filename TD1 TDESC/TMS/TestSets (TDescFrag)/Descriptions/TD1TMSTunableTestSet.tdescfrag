@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<TuningRoot>
+    <TdescFrag>
+        <TunableList class="TD1DevAccessPanelTunableTestSet" description="A list of tests groups for TD1 Tests.  At least one must pass all its sub-tests to pass the TestSet. ORs of ANDs" Deprecated="False" filter="0" group="General">
+            <TunableList class="TunableList" description="A list of tests for TD1 Tests.  All of these must pass for the group to pass." Deprecated="False" filter="0" group="General">
+                <TunableVariant type="None" class="TunableTestVariant" default="none" description="A single tunable test." Deprecated="False" filter="0" group="General">
+                    <TunableTuple name="pack_test" class="TD1TMSTeleportPackTest" display="Pack Test" description="A test that returns True if the specified pack is installed and enabled or vice versa based on the tuned options." static_entries="""sims4-common.Pack" Deprecated="False" filter="0" group="General">
+                        <TunableEnum type="Pack" name="pack" class="TunableEnumEntry" default="BASE_GAME" description="The pack to test for." display="Pack" Deprecated="False" filter="0" group="General" />
+
+                        <TunableEnum type="TeleportStyle" name="teleport_type" class="TunableEnumEntry" default="NONE" description="The Teleport Type to test for. Can be left as None by default if not required." dynamic_entries="teleport-teleport_enums.TeleportStyle._elements" static_entries="teleport-teleport_enums.TeleportStyle" display="Teleport Type" Deprecated="False" filter="0" group="General" />
+
+                        <Tunable type="bool" name="is_installed" class="Tunable" default="False" description="Modifier to determine if the pack is installed or not." display="Is Installed" Deprecated="False" filter="0" group="General" />
+                    </TunableTuple>
+
+                    <TunableTuple name="config_option_test" class="TD1TMSConfigOptionTest" display="Config Option Test" description="A test that returns True if the specified config type matches the specified conditions." Deprecated="False" filter="0" group="0">
+                        <Tunable type="str" name="config_type" class="Tunable" default="" description="The Config Type to test for." display="Config Type" Deprecated="False" filter="0" group="General" />
+
+                        <Tunable type="bool" name="is_enabled" class="Tunable" default="False" description="Modifier to determine if the option is set to True or not. Boolean Only." display="Is Enabled" Deprecated="False" filter="0" group="General" />
+
+                        <Tunable type="str" name="is_matching_str" class="Tunable" default="" description="Test to determine if the config option matches the specified option here. String Only." display="Is Matching Str" Deprecated="False" filter="0" group="General" />
+
+                        <TunableTuple name="is_matching_num" class="TunableThreshold" display="Is Matching Num" description="Test to determine if the specified value and config option satisfy the test. Integer and Float only." Deprecated="False" filter="0" group="General">
+                            <TunableEnum type="Operator" name="comparison" class="TunableOperator" default="GREATER_OR_EQUAL" display="Comparison" static_entries="sims4-math.Operator" description="The comparison to perform against the value." Deprecated="False" filter="0" group="General" />
+                            <Tunable type="float" name="value" class="Tunable" default="0" display="Value" description="The value of a threshold." tuning_state="NeedsTuning" Deprecated="False" filter="0" group="General" />
+                        </TunableTuple>
+                    </TunableTuple>
+
+                    <TunableTuple name="custom_distance_test" class="TD1TMSCustomDistanceTest" display="Custom Distance Test" description="A test that returns True if the obtained distance meet the tuned distance requirements and conditions." Deprecated="False" filter="0" group="General">
+                        <Tunable type="str" name="config_type" class="Tunable" default="" description="The Config Type to test for." display="Config Type" Deprecated="False" filter="0" group="General" />
+
+                        <TunableEnum type="Operator" name="comparison" class="TunableOperator" default="GREATER_OR_EQUAL" display="Comparison" static_entries="sims4-math.Operator" description="The comparison to perform against the value." Deprecated="False" filter="0" group="General" />
+
+                        <TunableVariant type="None" name="level_modifier" class="TunableVariant" default="no_modifier" display="Level Modifier" description="Determine how difference in levels affects distance. A modifier of&#xA;10, for example, would mean that the distance between two objects is&#xA;increased by 10 meters for every floor between them." Deprecated="False" filter="0" group="General">
+                            <Tunable name="infinite" class="TunableExistance" display="Infinite" />
+                            <Tunable name="no_modifier" class="TunableExistance" display="No Modifier" />
+                            <Tunable type="float" name="specific" class="TunableRange" default="8" display="Specific" min="0" max="None" description="A meter modifier to add to the distance multiplied by the number&#xA;of floors between subject and target." tuning_state="NeedsTuning" Deprecated="False" filter="0" group="General" />
+                        </TunableVariant>
+
+                        <TunableVariant type="None" name="object_count_threshold" class="OptionalTunable" default="disabled" display="Object Count Threshold" description="The number of objects that must pass the distance test for the overall test to succeed. &#xA;&#xA;If enabled then the tuned number of objects must pass the distance test for the test to succeed.&#xA;If disabled then ALL of the objects must pass the distance test for the test to succeed." Deprecated="False" filter="0" group="General">
+                            <Tunable name="disabled" class="TunableExistance" display="Disabled" />
+                            <TunableTuple name="enabled" class="TunableThreshold" display="Enabled" description="The number of objects that must pass the distance test in order for the test to succeed." Deprecated="False" filter="0" group="General">
+                                <TunableEnum type="Operator" name="comparison" class="TunableOperator" default="GREATER_OR_EQUAL" display="Comparison" static_entries="sims4-math.Operator" description="The comparison to perform against the value." Deprecated="False" filter="0" group="General" />
+                                <Tunable type="float" name="value" class="Tunable" default="0" display="Value" description="The value of a threshold." tuning_state="NeedsTuning" Deprecated="False" filter="0" group="General" />
+                            </TunableTuple>
+                        </TunableVariant>
+
+                        <TunableEnum type="ParticipantType" name="subject" class="TunableEnumEntry" default="Actor" display="Subject" static_entries="interactions.ParticipantType" description="The subject of the test." Deprecated="False" filter="0" group="General" />
+
+                        <TunableVariant type="None" name="target" class="TunableVariant" default="participant_type" display="Target" description="The object to find the distance to. &#xA;&#xA;participant_type: Allows you to specify the participant you want to check the distance to.&#xA;object_tags: Allows you to specify a list of tags to use to find objects to test the distance to." Deprecated="False" filter="0" group="General">
+                            <TunableTuple name="object_tags" class="TunableTuple" display="Object Tags" Deprecated="False" filter="0" group="General">
+                                <TunableList name="tags" class="TunableTags" display="Tags" Deprecated="False" filter="0" group="General" unique_entries="true">
+                                    <TunableEnum type="Tag" class="TunableEnumEntry" default="INVALID" dynamic_entries="tag.Tag._elements" static_entries="tag.Tag" description="Supplies the target(s) of the test using any object that matches the tuned tags." Deprecated="False" filter="0" group="General" invalid_entries="INVALID" pack_safe="True" />
+                                </TunableList>
+                            </TunableTuple>
+                            <TunableTuple name="participant_type" class="TunableTuple" display="Participant Type" Deprecated="False" filter="0" group="General">
+                                <TunableEnum type="ParticipantType" name="participant" class="TunableEnumEntry" default="Object" display="Participant" static_entries="interactions.ParticipantType" description="Supplies the target(s) of the test using the tuned ParticipantType." Deprecated="False" filter="0" group="General" />
+                            </TunableTuple>
+                        </TunableVariant>
+                    </TunableTuple>
+                </TunableVariant>
+            </TunableList>
+        </TunableList>
+    </TdescFrag>
+</TuningRoot>
