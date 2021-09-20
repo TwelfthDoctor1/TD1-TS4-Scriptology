@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<TuningRoot>
+    <Module name="TMS.MainLib.TD1_TMS_ModuleHandler">
+        <Class name="TD1TMSModuleHandler" description="TDESC for the Module Handler for the TMS (and for other mods that share part of its tunings with the TMS). For more information on these Tunables, please refer to the Module inside the mod as extra documentation are written there.">
+            <Tunable type="bool" name="WELLNESS_TMS_AUTOADD" class="Tunable" display="Wellness TMS AutoAdd" description="Whether the Wellness TMS Trait will be auto added onto Sims on load." default="False" Deprecated="True" filter="0" group="General" />
+
+            <Tunable type="bool" name="VAMPIRE_BAT_TMS_AUTOADD" class="Tunable" display="Vampire Bat TMS AutoAdd" description="Whether the Vampire Bat TMS Trait will be auto added onto Sims on load." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="bool" name="VAMPIRE_MIST_TMS_AUTOADD" class="Tunable" display="Vampire Mist TMS AutoAdd" description="Whether the Vampire Mist TMS Trait will be auto added onto Sims on load." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="bool" name="VAMPIRE_RUN_TMS_AUTOADD" class="Tunable" display="Vampire Run TMS AutoAdd" description="Whether the Vampire Run TMS Trait will be auto added onto Sims on load" default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="bool" name="WITCH_SPELL_TMS_AUTOADD" class="Tunable" display="Witch Spell TMS AutoAdd" description="Whether the Witch Spell TMS Trait will be auto added onto sims on load." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="bool" name="WITCH_BROOMS_TMS_AUTOADD" class="Tunable" display="Witch Brooms TMS AutoAdd" description="Whether the Witch Brooms TMS Trait will be auto added onto sims on load." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="bool" name="TD1_DARK_APPARATE_TMS_AUTOADD" class="Tunable" display="TD1 Dark Apparate TMS AutoAdd" description="Whether the Dark Apparate Spell TMS Trait will be auto added on load." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="bool" name="TD1_MIST_SPELL_TMS_AUTOADD" class="Tunable" display="TD1 Mist Spell TMS AutoAdd" description="Whether the Mist Spell TMS Trait wil be auto added onto sims on load." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="bool" name="TD1_BAT_SPELL_TMS_AUTOADD" class="Tunable" display="TD1 Bat Spell TMS AutoAdd" description="Whether the Bat Spell TMS Trait will be auto added onto sims on load." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="bool" name="TD1_RUN_SPELL_TMS_AUTOADD" class="Tunable" display="TD1 Run Spell TMS AutoAdd" description="Whether the Run Spell TMS Trait will be auto added onto sims on load." default="False" Deprecated="True" filter="0" group="General" />
+
+            <Tunable type="bool" name="PET_TELEPORT_TMS_AUTOADD" class="Tunable" display="Pet Teleport TMS AutoAdd" description="Whether the Pet Teleprt TMS Trait will be auto added onto sims on load." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="trait" name="WELLNESS_TELEPORT_ENABLED_TRAIT" class="Tunable" display="Wellness Teleport Enabled Trait" description="Tuning Instance of the Wellness Teleport Enabled Trait." default="False" Deprecated="True" filter="0" group="General" />
+
+            <Tunable type="trait" name="VAMPIRE_BAT_TELEPORT_ENABLED_TRAIT" class="Tunable" display="Vampire Bat Teleport Enabled Trait" description="Tuning Instance of the Vampire Bat Teleport Enabled Trait." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="trait" name="VAMPIRE_MIST_TELEPORT_ENABLED_TRAIT" class="Tunable" display="Vampire Mist Teleport Enabled Trait" description="Tuning Instance of the Vampire Mist Teleport Enabled Trait." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="trait" name="VAMPIRE_RUN_WALKSTYLE_ENABLED_TRAIT" class="Tunable" display="Vampire Run Walkstyle Enabled Trait" description="Tuning Instance of the Vampire Run Walkstyle Enabled Trait." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="trait" name="WITCH_SPELL_TELEPORT_ENABLED_TRAIT" class="Tunable" display="Witch Spell Teleport Enabled Trait" description="Tuning Instance of the Witch Teleport Spell Teleport Enabled Trait." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="trait" name="WITCH_BROOMS_TELEPORT_ENABLED_TRAIT" class="Tunable" display="Witch Brooms Teleport Enabled Trait" description="Tuning Instance of the Witch Broom Teleport Enabled Trait." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="trait" name="TD1_DARK_APPARATE_TELEPORT_ENABLED_TRAIT" class="Tunable" display="TD1 Dark Apparate Teleport Enabled Trait" description="Tuning Instance of the Dark Apparate Spell Teleport Enabled Trait." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="trait" name="TD1_MIST_SPELL_TELEPORT_ENABLED_TRAIT" class="Tunable" display="TD1 Mist Spell Teleport Enabled Trait" description="Tuning Instance of the Mist Spell Teleport Enabled Trait." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="trait" name="TD1_BAT_SPELL_TELEPORT_ENABLED_TRAIT" class="Tunable" display="TD1 Bat Spell Teleport Enabled Trait" description="Tuning Instance of the Bat Spell Teleport Enabled Trait." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="trait" name="TD1_RUN_SPELL_WALKSTYLE_ENABLED_TRAIT" class="Tunable" display="TD1 Run Spell Walkstyle Enabled Trait" description="Tuning Instance of the Run Spell Walkstyle Enabled Trait." default="False" Deprecated="True" filter="0" group="General" />
+
+            <Tunable type="trait" name="PET_TELEPORT_ENABLED_TRAIT" class="Tunable" display="Pet Teleport Enabled Trait" description="Tuning Instance of the Pet Teleport Enabled Trait." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="trait" name="WELLNESS_TMS_TRAIT" class="Tunable" display="Wellness TMS Trait" description="Tuning Instance of the Wellness TMS Trait." default="False" Deprecated="True" filter="0" group="General" />
+
+            <Tunable type="trait" name="VAMPIRE_BAT_TMS_TRAIT" class="Tunable" display="Vampire Bat TMS Trait" description="Tuning Instance of the Vampire Bat TMS Trait." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="trait" name="VAMPIRE_MIST_TMS_TRAIT" class="Tunable" display="Vampire Mist TMS Trait" description="Tuning Instance of the Vampire Mist TMS Trait." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="trait" name="VAMPIRE_RUN_TMS_TRAIT" class="Tunable" display="Vampire Run TMS Trait" description="Tuning Instance of the Vampire Run TMS Trait." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="trait" name="WITCH_SPELL_TMS_TRAIT" class="Tunable" display="Witch Spell TMS Trait" description="Tuning Instance of the Witch Teleport Spell TMS Trait." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="trait" name="WITCH_BROOMS_TMS_TRAIT" class="Tunable" display="Witch Brooms TMS Trait" description="Tuning Instance of the Witch Broom TMS Trait." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="trait" name="TD1_DARK_APPARATE_TMS_TRAIT" class="Tunable" display="TD1 Dark Apparate TMS Trait" description="Tuning Instance of the Dark Apparate Spell TMS Trait." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="trait" name="TD1_MIST_SPELL_TMS_TRAIT" class="Tunable" display="TD1 Mist Spell TMS Trait" description="Tuning Instance of the Mist Spell TMS Trait." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="trait" name="TD1_BAT_SPELL_TMS_TRAIT" class="Tunable" display="TD1 Bat Spell TMS Trait" description="Tuning Instance of the Bat Spell TMS Trait." default="False" Deprecated="False" filter="0" group="General" />
+
+            <Tunable type="trait" name="TD1_RUN_SPELL_TMS_TRAIT" class="Tunable" display="TD1 Run Spell TMS Trait" description="Tuning Instance of the Run Spell TMS Trait." default="False" Deprecated="True" filter="0" group="General" />
+
+            <Tunable type="trait" name="PET_TELEPORT_TMS_TRAIT" class="Tunable" display="Pet Teleport TMS Trait" description="Tuning Instance of the Pet Teleport TMS Trait." default="False" Deprecated="False" filter="0" group="General" />
+
+            <EnumItem type="TeleportStyle" name="WELLNESS_TELEPORT_PACK" class="TunableEnumEntry" default="BASE_GAME" display="Wellness Teleport Pack" description="The pack which has the Wellness Teleport components." dynamic_entries="teleport-teleport_enums.TeleportStyle._elements" static_entries="teleport-teleport_enums.TeleportStyle" Deprecated="True" filter="0" group="General" />
+
+            <EnumItem type="TeleportStyle" name="VAMPIRE_BAT_TELEPORT_PACK" class="TunableEnumEntry" default="BASE_GAME" display="Vampire Bat Teleport Pack" description="The pack which has the Vampire Bat Teleport components." dynamic_entries="teleport-teleport_enums.TeleportStyle._elements" static_entries="teleport-teleport_enums.TeleportStyle" Deprecated="False" filter="0" group="General" />
+
+            <EnumItem type="TeleportStyle" name="VAMPIRE_MIST_TELEPORT_PACK" class="TunableEnumEntry" default="BASE_GAME" display="Vampire Mist Teleport Pack" description="The pack which has the Vampire Mist Teleport components." dynamic_entries="teleport-teleport_enums.TeleportStyle._elements" static_entries="teleport-teleport_enums.TeleportStyle" Deprecated="False" filter="0" group="General" />
+
+            <EnumItem type="TeleportStyle" name="VAMPIRE_RUN_WALKSTYLE_PACK" class="TunableEnumEntry" default="BASE_GAME" display="Vampire Run Walkstyle Pack" description="The pack which has the Vampire Run Walkstyle components." dynamic_entries="teleport-teleport_enums.TeleportStyle._elements" static_entries="teleport-teleport_enums.TeleportStyle" Deprecated="False" filter="0" group="General" />
+
+            <EnumItem type="TeleportStyle" name="WITCH_SPELL_TELEPORT_PACK" class="TunableEnumEntry" default="BASE_GAME" display="Witch Spell Teleport Pack" description="The pack which has the Witch Teleport components." dynamic_entries="teleport-teleport_enums.TeleportStyle._elements" static_entries="teleport-teleport_enums.TeleportStyle" Deprecated="False" filter="0" group="General" />
+
+            <EnumItem type="TeleportStyle" name="WITCH_BROOMS_TELEPORT_PACK" class="TunableEnumEntry" default="BASE_GAME" display="Witch Brooms Teleport pack" description="The pack which has the Brooms Teleport components." dynamic_entries="teleport-teleport_enums.TeleportStyle._elements" static_entries="teleport-teleport_enums.TeleportStyle" Deprecated="False" filter="0" group="General" />
+
+            <EnumItem type="TeleportStyle" name="PET_TELEPORT_PACK" class="TunableEnumEntry" default="BASE_GAME" display="Pet Teleport Pack" description="The pack which has the Pet Teleport components." dynamic_entries="teleport-teleport_enums.TeleportStyle._elements" static_entries="teleport-teleport_enums.TeleportStyle" Deprecated="False" filter="0" group="General" />
+
+            <TunableTuple name="TMS_STARTUP_NOTIFICATION" display="TMS Startup Notification" description="The notification to be used on game load, used on release versions. [Please refer to another TDESC for UiDialogNotification Tunables]" class="UiDialogNotification" Deprecated="True" filter="0" group="General" />
+
+            <TunableTuple name="TMS_DEVELOPER_STARTUP_NOTIFICATION" display="TMS Developer Startup Notification" description="The developer notification to be used on game load, developer use only. [Please refer to another TDESC for UiDialogNotification Tunables]" class="UiDialogNotification" Deprecated="True" filter="0" group="General" />
+
+            <TunableTuple name="TMS_BETA_STARTUP_NOTIFICATION" display="TMS Beta Startup Notification" description="The beta notification to be used on game load, developer use only. [Please refer to another TDESC for UiDialogNotification Tunables]" class="UiDialogNotification" Deprecated="True" filter="0" group="General" />
+
+            <Tunable type="bool" name="TMS_ALLOW_STARTUP_NOTIFICATION" display="TMS Allow Startup Notification" description="Whether the startup notification should show up on load." class="Tunable" Deprecated="False" default="True" filter="0" group="General" />
+
+            <Tunable type="bool" name="TMS_ALLOW_DEVELOPER_STARTUP_NOTIFICATION" display="TMS Allow Developer Startup Notification" description="Whether the developer startup notification should show up on load." class="Tunable" Deprecated="False" default="False" filter="0" group="General" />
+
+            <Tunable type="bool" name="TMS_ALLOW_BETA_STARTUP_NOTIFICATION" display="TMS Allow Beta Startup Notification" description="Whether the beta startup notification should show up on load." class="Tunable" Deprecated="False" default="False" filter="0" group="General" />
+
+            <Tunable type="str" name="TMS_MOD_VERSION" display="TMS Mod Version" description="Current mod version. Used for Mod Verification and Testing." class="Tunable" Deprecated="False" default="" filter="0" group="General" />
+
+            <Tunable type="bool" name="TMS_IGNORE_MOD_VERSION" display="TMS Ignore Mod Version" description="Controls the Version Mismatch Test. If ignored, Version Mismatch Test will not flag up errors should versions be different." class="Tunable" Deprecated="False" default="False" filter="0" group="General" />
+
+            <Tunable type="bool" name="TMS_STARTUP_NOTIFICATION_V2_USAGE" display="TMS Startup Notification V2 Usage" description="Controls usage of which version of the Startup Notification should be used. If disabled, Version 1 will be used. If enabled, Version 2 will be used." class="Tunable" Deprecated="False" default="False" filter="0" group="General" />
+        </Class>
+    </Module>
+</TuningRoot>
