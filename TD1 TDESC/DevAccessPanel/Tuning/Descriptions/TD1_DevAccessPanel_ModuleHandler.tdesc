@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<TuningRoot>
+    <Module name="DevAccessPanel.MainLib.TD1_DevAccessPanel_ModuleHandler">
+        <Class name="TD1AccessPanelModuleHandler" description="TDESC for the Module Handler for the DevAccessPanel (and for other mods that share part of its tunings with the DevAccessPanel). For more information on these Tunables, please refer to the Module inside the mod as extra documentation are written there.">
+            <TunableTuple name="ACCESSPANEL_STARTUP_NOTIFICATION" display="AccessPanel Startup Notification" description="The notification to be used on game load, used on release versions. [Please refer to another TDESC for UiDialogNotification Tunables]" class="UiDialogNotification" Deprecated="True" filter="0" group="General" />
+
+            <TunableTuple name="ACCESSPANEL_DEVELOPER_STARTUP_NOTIFICATION" display="AccessPanel Developer Startup Notification" description="The developer notification to be used on game load, developer use only. [Please refer to another TDESC for UiDialogNotification Tunables]" class="UiDialogNotification" Deprecated="True" filter="0" group="General" />
+
+            <TunableTuple name="ACCESSPANEL_BETA_STARTUP_NOTIFICATION" display="AccessPanel Beta Startup Notification" description="The beta notification to be used on game load, developer use only. [Please refer to another TDESC for UiDialogNotification Tunables]" class="UiDialogNotification" Deprecated="True" filter="0" group="General" />
+
+            <Tunable type="bool" name="ACCESSPANEL_ALLOW_STARTUP_NOTIFICATION" display="AccessPanel Allow Startup Notification" description="Whether the startup notification should show up on load." class="Tunable" Deprecated="False" default="True" filter="0" group="General" />
+
+            <Tunable type="bool" name="ACCESSPANEL_ALLOW_DEVELOPER_STARTUP_NOTIFICATION" display="AccessPanel Allow Developer Startup Notification" description="Whether the developer startup notification should show up on load." class="Tunable" Deprecated="False" default="False" filter="0" group="General" />
+
+            <Tunable type="bool" name="ACCESSPANEL_ALLOW_BETA_STARTUP_NOTIFICATION" display="AccessPanel Allow Beta Startup Notification" description="Whether the beta startup notification should show up on load." class="Tunable" Deprecated="False" default="False" filter="0" group="General" />
+
+            <Tunable type="bool" name="ACCESSPANEL_ALLOW_INTEGRATION_NOTIFICATION" display="AccessPanel Allow Integration Notification" description="Whether the integration notification should show up on load." class="Tunable" Deprecated="False" default="False" filter="0" group="General" />
+
+            <Tunable type="bool" name="ACCESSPANEL_ALLOW_MODIFIER_NOTIFICATION" display="AccessPanel Allow Modifier Notification" description="Whether the modifier notification should show up on load." class="Tunable" Deprecated="False" default="False" filter="0" group="General" />
+
+            <Tunable type="bool" name="ACCESSPANEL_ALLOW_CONFIG_NOTIFICATION" display="AccessPanel Allow Config Notification" description="Whether the config notification should show up on load." class="Tunable" Deprecated="False" default="False" filter="0" group="General" />
+
+            <Tunable type="bool" name="ACCESSPANEL_OVERRIDE_PACK_TESTSET" display="AccessPanel Override Pack TestSet" description="Controls the overridding of Pack TestSets. If enabled, any pack testset that is supposedly to be set as False will be inverted to True. This can allow access to certain sections even though the player does not own the specified pack." class="Tunable" Deprecated="False" default="False" filter="0" group="General" />
+
+            <Tunable type="bool" name="ACCESSPANEL_OVERRIDE_INTEGRATION_TESTSET" display="AccessPanel Override Integration TestSet" description="Controls the overridding of Integration TestSets. If enabled, any Integration testset that is supposedly to be set as False will be inverted to True. This can allow access to certain sections even though the player does not own the specified Integration." class="Tunable" Deprecated="False" default="False" filter="0" group="General" />
+
+            <Tunable type="bool" name="ACCESSPANEL_OVERRIDE_VERSION_TESTSET" display="AccessPanel Override Version TestSet" description="Controls the overridding of Version TestSets. If enabled, any VErsion testset that is supposedly to be set as False will be inverted to True. This can allow access to certain sections even though the player does not own the specified Version." class="Tunable" Deprecated="False" default="False" filter="0" group="General" />
+
+            <Tunable type="str" name="ACCESSPANEL_MOD_VERSION" display="AccessPanel Mod Version" description="Current mod version. Used for Mod Verification and Testing." class="Tunable" Deprecated="False" default="" filter="0" group="General" />
+
+            <Tunable type="bool" name="ACCESSPANEL_IGNORE_MOD_VERSION" display="AccessPanel Ignore Mod Version" description="Controls the Version Mismatch Test. If ignored, Version Mismatch Test will not flag up errors should versions be different." class="Tunable" Deprecated="False" default="False" filter="0" group="General" />
+
+            <Tunable type="bool" name="ACCESSPANEL_STARTUP_NOTIFICATION_V2_USAGE" display="AccessPanel Startup Notification V2 Usage" description="Controls usage of which version of the Startup Notification should be used. If disabled, Version 1 will be used. If enabled, Version 2 will be used." class="Tunable" Deprecated="False" default="False" filter="0" group="General" />
+
+            <Tunable type="bool" name="ACCESSPANEL_OVERRIDE_DEBUG_INTERACTIONS" display="AccessPanel Override Debug Notifications" description="Controls whether Debug Interactions should appear in release versions." class="Tunable" Deprecated="False" default="False" filter="0" group="General" />
+
+            <Tunable type="bool" name="ACCESSPANEL_FORCE_DEBUG_INTERACTIONS_INTO_CHEAT_PIE_MENU" display="AccessPanel Force Debug Interactions Into Cheat Pie Menu" description="Controls whether Debug-Converted Interactions should be inside the Cheat Pie Menu. If Debug Interactions are not overridden, then this option will be ignored." class="Tunable" Deprecated="False" default="False" filter="0" group="General" />
+
+            <Tunable type="str" name="ACCESSPANEL_CHANGELOG" display="AccessPanel Changelog" description="Changelog Text for Changelog UI." class="Tunable" Deprecated="False" default="" filter="0" group="General" />
+        </Class>
+    </Module>
+</TuningRoot>

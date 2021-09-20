@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<TuningRoot>
+    <Module name="DevAccessPanel.MainLib.TD1_DevAccessPanel_Config" description="TDESC for the Config Module for the DevAccessPanel (and other mods that use the same tunings).">
+        <Class name="TD1DevAccessPanelConfigHandlerUI">
+            <TunableList class="TunableMapping" name="CONFIG_UI_TEXT_DISPLAY" description="List to hold the UI Text for each option." Deprecated="False" filter="0" group="General">
+                <TunableTuple class="TunableTuple" Deprecated="False" filter="0" group="General">
+                    <Tunable class="Tunable" type="str" name="option_type" description="The option type for the UI to be associated with." default="" Deprecated="False" filter="0" group="General" />
+
+                    <TunableTuple class="TunableTuple" name="ui_data" Deprecated="False" filter="0" group="General">
+                        <TunableTuple class="UiDialogOkCancel" name="ok_cancel" description="Meant for Boolean Options. [Please refer to another TDESC for UIDialogOkCancel Tunables]" Deprecated="False" filter="0" group="General" />
+
+                        <TunableTuple class="UiDialogTextInputOkCancel" name="text_input" description="Meant for String, Integer and Float Options. For 1 Text Input. [Please refer to another TDESC for UIDialogOkCancel Tunables]" Deprecated="False" filter="0" group="General" />
+                    </TunableTuple>
+                </TunableTuple>
+            </TunableList>
+        </Class>
+    </Module>
+</TuningRoot>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<TuningRoot>
+    <Module name="DevAccessPanel.MainLib.TD1_DevAccessPanel_ModCheck">
+        <Class name="IntegrationEnums" enum_locked="False">
+            <EnumItem name="NONE" enum_value="0" />
+
+            <EnumItem name="MASTER_SPELLS" enum_value="1" />
+
+            <EnumItem name="TMS" enum_value="2" />
+
+            <EnumItem name="UNLOCK_RECIPES" enum_value="3" />
+
+            <EnumItem name="CUSTOM_LOANS" enum_value="4" />
+
+            <EnumItem name="UNLOCK_REWARDS" enum_value="5" />
+        </Class>
+    </Module>
+</TuningRoot>

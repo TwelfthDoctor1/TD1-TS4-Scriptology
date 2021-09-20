@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<TuningRoot>
+    <Module name="DevAccessPanel.TestSets.TD1_DevAccessPanel_TestSet_Version">
+        <Class name="ModVersionEnums" enum_locked="False">
+            <EnumItem name="NONE" enum_value="0" />
+
+            <EnumItem name="RELEASE" enum_value="1" />
+
+            <EnumItem name="DEVELOPER" enum_value="2" />
+
+            <EnumItem name="BETA" enum_value="3" />
+
+            <EnumItem name="DEVELOPER_RELEASE" enum_value="4" />
+
+            <EnumItem name="BETA_RELEASE" enum_value="5" />
+        </Class>
+    </Module>
+</TuningRoot>

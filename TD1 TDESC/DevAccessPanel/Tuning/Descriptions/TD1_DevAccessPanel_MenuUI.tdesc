@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<TuningRoot>
+    <Module name="DevAccessPanel.CoreLib.TD1_DevAccessPanel_MenuUI">
+        <Class name="MenuUIBaseIcons">
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_SETTINGS_ENABLED" display="UI Icon Settings Enabled" description="Base UI Icon for SETTINGS_ENABLED" default="" Deprecated="False" filter="0" group="General" />
+
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_SETTINGS_DISABLED" display="UI Icon Settings Disabled" description="Base UI Icon for SETTINGS_DISABLED" default="" Deprecated="False" filter="0" group="General" />
+
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_SETTINGS_DISALLOW" display="UI Icon Settings Disallow" description="Base UI Icon for SETTINGS_DISALLOW" default="" Deprecated="False" filter="0" group="General" />
+
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_MENU_LOCKED" display="UI Icon Menu Locked" description="Base UI Icon for MENU_LOCKED" default="" Deprecated="False" filter="0" group="General" />
+
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_MENU_MISSING" display="UI Icon Menu Missing" description="Base UI Icon for MENU_MISSING" default="" Deprecated="False" filter="0" group="General" />
+
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_MENU_UNKNOWN" display="UI Icon Menu Unknown" description="Base UI Icon for MENU_UNKNOWN" default="" Deprecated="False" filter="0" group="General" />
+
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_MENU_BACK" display="UI Icon Menu Back" description="Base UI Icon for MENU_BACK" default="" Deprecated="False" filter="0" group="General" />
+
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_MENU_EXIT" display="UI Icon Menu Exit" description="Base UI Icon for MENU_EXIT" default="" Deprecated="False" filter="0" group="General" />
+
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_MENU_PLACEHOLDER" display="UI Icon Menu Placeholder" description="Base UI Icon for MENU_PLACEHOLDER" default="" Deprecated="False" filter="0" group="General" />
+
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_SETTINGS_VARIATION" display="UI Icon Settings Variation" description="Base UI Icon for SETTINGS_ENABLED" default="" Deprecated="False" filter="0" group="General" />
+
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_SETTINGS_MISSING" display="UI Icon Settings Missing" description="Base UI Icon for SETTINGS_MISSING" default="" Deprecated="False" filter="0" group="General" />
+
+            <TunableVariant type="None" class="TunableIconVariant" name="UI_ICON_SETTINGS_UNKNOWN" display="UI Icon Settings Unknown" description="Base UI Icon for SETTINGS_UNKNOWN" default="" Deprecated="False" filter="0" group="General" />
+        </Class>
+
+        <Class name="MenuUIBaseIconEnums" enum_locked="False">
+            <EnumItem name="NONE" enum_value="0" />
+
+            <EnumItem name="SETTINGS_ENABLED" enum_value="1" />
+
+            <EnumItem name="SETTINGS_DISABLED" enum_value="2" />
+
+            <EnumItem name="SETTINGS_DISALLOW" enum_value="3" />
+
+            <EnumItem name="MENU_LOCKED" enum_value="4" />
+
+            <EnumItem name="MENU_MISSING" enum_value="5" />
+
+            <EnumItem name="MENU_UNKNOWN" enum_value="6" />
+
+            <EnumItem name="MENU_BACK" enum_value="7" />
+
+            <EnumItem name="MENU_EXIT" enum_value="8" />
+
+            <EnumItem name="MENU_PLACEHOLDER" enum_value="9" />
+
+            <EnumItem name="SETTINGS_VARIATION" enum_value="10" />
+
+            <EnumItem name="SETTINGS_MISSING" enum_value="11" />
+
+            <EnumItem name="SETTINGS_UNKNOWN" enum_value="12" />
+        </Class>
+    </Module>
+</TuningRoot>
