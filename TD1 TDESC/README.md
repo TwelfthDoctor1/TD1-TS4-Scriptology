@@ -35,5 +35,5 @@ The Older Version Injectors only allows one injection per instance, thus using u
 
 #### Newer Version Injectors
 
-The Newer Version Injectors allows for mutiple injections on one instance therefore saving up on multiple XML Instances (though it is always recommended to classify them through instances). The TDESCs for these Injectors follow this context: `TD1[InjectorName]V[VersionNumber].tdesc OR TD1[InjectorName][VersionNumber].tdesc (Example: TD1LootIntInjectorV2.tdesc | Td1AffordanceInjector3.tdesc)`
+The Newer Version Injectors allows for mutiple injections on one instance therefore saving up on multiple XML Instances (though it is always recommended to classify them through instances). The TDESCs for these Injectors follow this context: `TD1[InjectorName]V[VersionNumber].tdesc OR TD1[InjectorName][VersionNumber].tdesc (Example: TD1LootIntInjectorV2.tdesc | TD1AffordanceInjector3.tdesc)`
 
