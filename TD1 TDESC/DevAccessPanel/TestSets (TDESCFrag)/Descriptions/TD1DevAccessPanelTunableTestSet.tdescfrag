@@ -3,7 +3,7 @@
 <TuningRoot>
     <TdescFrag>
         <TunableList class="TD1DevAccessPanelTunableTestSet" description="A list of tests groups for TD1 Tests.  At least one must pass all its sub-tests to pass the TestSet. ORs of ANDs" Deprecated="False" filter="0" group="General">
-            <TunableList class="TunableList" description="A list of tests for TD1 Tests.  All of these must pass for the group to pass." Deprecated="False" filter="0" group="General">
+            <TunableVariant type="None" class="TunableTestVariant" default="none" description="A single tunable test." Deprecated="False" filter="0" group="General">
                 <TunableTuple name="pack_test" class="TD1DevAccessPanelPackTest" display="Pack Test" description="A test that returns True if the specified pack is installed and enabled or vice versa based on the tuned options." Deprecated="False" filter="0" group="General">
                     <TunableEnum type="Pack" name="pack" class="TunableEnumEntry" default="BASE_GAME" description="The pack to test for." display="Pack" Deprecated="False" filter="0" group="General" />
 
@@ -34,7 +34,7 @@
                         <Tunable type="float" name="value" class="Tunable" default="0" display="Value" description="The value of a threshold." tuning_state="NeedsTuning" Deprecated="False" filter="0" group="General" />
                     </TunableTuple>
                 </TunableTuple>
-            </TunableList>
+            </TunableVariant>
         </TunableList>
     </TdescFrag>
 </TuningRoot>
