@@ -351,6 +351,197 @@ def handle_settings_icon(config_option, is_enable, version_type, choice):
                         )
 ```
 
-**Note: My code uses Custom Loggers to aid in logging. It is highly recommended to log your processes to determine if they are working or when debugging. You can use the sims4.log.Logger Class to log the data being parsed.**
+**Note: My code uses Custom Loggers to aid in logging. It is highly recommended to log your processes to determine if they are working or when debugging. You can use the sims4.log.Logger Class to log the data being parsed. In order to view those logs, you need a tool by Scumbumbo to view them (this mod makes the game longer and slower to load due to code executions which is why I moved over to Custom Loggers).
 
-## Part IV: xxx
+There are two other functions inside the code snippet with the third function. Those two functions are used to obtain the final icon to be used based on certain conditions such as tests. (The `handle_settings_icon` is not part of this Menu UI Picker stuff, but I included it to show on how it can be modified work for another purpose which in that case is config options).
+
+## Part IV: Base Icons and Its Data
+
+I'm pretty sure that you have noticed that there are several mentions of `parse_ui_icon_enum_to_data` function and the `MenuUIBaseIconsEnums` which we will get to it now.
+
+In the code, the Base Icon uses an enum from the `MenuUIBaseIconsEnums` class to represent as that row's icon for a certain state. However, the enum obviously does not hold any icon data, so therefore it needs to have something to translate and cross reference from. From that, the `MenuUIBaseIcons` class is specifically used to hold the IconData that will be used for the picker.
+
+The translation of enum to IconData happens through the form of condition tests in the `parse_ui_icon_to_data` function. End result is that it returns the IconData from the `MenuUIBaseIcons` Module or return None.
+
+This is better explain with code:
+
+```py3
+class MenuUIBaseIcons:
+    """
+    The MenuUIBaseIcons are base icons for the Menu and Settings UI to rely upon if certain tunings are in place and
+    certain icons are not tuned.
+    """
+    UI_ICON_SETTINGS_ENABLED = TunableIconVariant()
+    UI_ICON_SETTINGS_DISABLED = TunableIconVariant()
+    UI_ICON_SETTINGS_DISALLOW = TunableIconVariant()
+    UI_ICON_MENU_LOCKED = TunableIconVariant()
+    UI_ICON_MENU_MISSING = TunableIconVariant()
+    UI_ICON_MENU_UNKNOWN = TunableIconVariant()
+    UI_ICON_MENU_BACK = TunableIconVariant()
+    UI_ICON_MENU_EXIT = TunableIconVariant()
+    UI_ICON_MENU_PLACEHOLDER = TunableIconVariant()
+    UI_ICON_SETTINGS_VARIATION = TunableIconVariant()
+    UI_ICON_SETTINGS_MISSING = TunableIconVariant()
+    UI_ICON_SETTINGS_UNKNOWN = TunableIconVariant()
+
+
+class MenuUIBaseIconsEnums(enum.Int):
+    """
+    The MenuUIBaseIconsEnums are used to translate the chosen enum from a tunable into its Icon Tunable Data equivalent
+    that is contained inside the MenuUIBaseIcons class.
+    """
+    NONE = 0
+    SETTINGS_ENABLED = 1
+    SETTINGS_DISABLED = 2
+    SETTINGS_DISALLOW = 3
+    MENU_LOCKED = 4
+    MENU_MISSING = 5
+    MENU_UNKNOWN = 6
+    MENU_BACK = 7
+    MENU_EXIT = 8
+    MENU_PLACEHOLDER = 9
+    SETTINGS_VARIATION = 10
+    SETTINGS_MISSING = 11
+    SETTINGS_UNKNOWN = 12
+
+
+def parse_ui_icon_enum_to_data(icon_enum):
+    """
+    This function translated the specified icon into the equivalent Icon Data stored in the MenuUIBaseIcon class.
+    :param icon_enum: MenuUIBaseIconsEnums
+    :return: Icon Data for Picker to resolve (TunableIconVariant)
+    """
+    if icon_enum == MenuUIBaseIconsEnums.NONE:
+        return None
+
+    elif icon_enum == MenuUIBaseIconsEnums.SETTINGS_ENABLED:
+        return MenuUIBaseIcons.UI_ICON_SETTINGS_ENABLED
+
+    elif icon_enum == MenuUIBaseIconsEnums.SETTINGS_DISABLED:
+        return MenuUIBaseIcons.UI_ICON_SETTINGS_DISABLED
+
+    elif icon_enum == MenuUIBaseIconsEnums.SETTINGS_DISALLOW:
+        return MenuUIBaseIcons.UI_ICON_SETTINGS_DISALLOW
+
+    elif icon_enum == MenuUIBaseIconsEnums.MENU_LOCKED:
+        return MenuUIBaseIcons.UI_ICON_MENU_LOCKED
+
+    elif icon_enum == MenuUIBaseIconsEnums.MENU_MISSING:
+        return MenuUIBaseIcons.UI_ICON_MENU_MISSING
+
+    elif icon_enum == MenuUIBaseIconsEnums.MENU_UNKNOWN:
+        return MenuUIBaseIcons.UI_ICON_MENU_UNKNOWN
+
+    elif icon_enum == MenuUIBaseIconsEnums.MENU_BACK:
+        return MenuUIBaseIcons.UI_ICON_MENU_BACK
+
+    elif icon_enum == MenuUIBaseIconsEnums.MENU_EXIT:
+        return MenuUIBaseIcons.UI_ICON_MENU_EXIT
+
+    elif icon_enum == MenuUIBaseIconsEnums.MENU_PLACEHOLDER:
+        return MenuUIBaseIcons.UI_ICON_MENU_PLACEHOLDER
+
+    elif icon_enum == MenuUIBaseIconsEnums.SETTINGS_VARIATION:
+        return MenuUIBaseIcons.UI_ICON_SETTINGS_VARIATION
+```
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<M n="DevAccessPanel.CoreLib.TD1_DevAccessPanel_MenuUI" s="5462905705901225125">
+  <C n="MenuUIBaseIcons">
+    <V n="UI_ICON_SETTINGS_ENABLED" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:A76AC5C9962DF26F</T>
+      </U>
+    </V>
+    <V n="UI_ICON_SETTINGS_DISABLED" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:A76AC5C9962DF270</T>
+      </U>
+    </V>
+    <V n="UI_ICON_SETTINGS_DISALLOW" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:A76AC5C9962DF271</T>
+      </U>
+    </V>
+    <V n="UI_ICON_MENU_LOCKED" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:A76AC5C9962DF272</T>
+      </U>
+    </V>
+    <V n="UI_ICON_MENU_MISSING" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:A76AC5C9962DF273</T>
+      </U>
+    </V>
+    <V n="UI_ICON_MENU_UNKNOWN" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:A76AC5C9962DF274</T>
+      </U>
+    </V>
+    <V n="UI_ICON_MENU_BACK" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:B915A9B157875A45</T>
+      </U>
+    </V>
+    <V n="UI_ICON_MENU_EXIT" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:8D62163B15A04B35</T>
+      </U>
+    </V>
+    <V n="UI_ICON_PLACEHOLDER" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:A76AC5C9962DF275</T>
+      </U>
+    </V>
+    <V n="UI_ICON_SETTINGS_VARIATION" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:A76AC5C9962DF276</T>
+      </U>
+    </V>
+    <V n="UI_ICON_SETTINGS_MISSING" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:A76AC5C9962DF277</T>
+      </U>
+    </V>
+    <V n="UI_ICON_SETTINGS_UNKNOWN" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:A76AC5C9962DF278</T>
+      </U>
+    </V>
+  </C>
+</M>
+```
+
+Here, I would like to point out about the TunableIconVariant and the one used in the picker. Compare them:
+#### Module
+```xml
+<V n="UI_ICON_SETTINGS_UNKNOWN" t="resource_key">
+  <U n="resource_key">
+    <T n="key">2f7d0004:00000000:A76AC5C9962DF278</T>
+  </U>
+</V>
+```
+#### Picker
+```xml
+<V n="icon_enabled" t="enabled">
+  <V n="enabled" t="resource_key">
+    <U n="resource_key">
+      <T n="key">2f7d0004:00000000:C45DF1733FED8944</T>
+    </U>
+  </V>
+</V>
+```
+
+The only difference is that there is one extra TunableVariant as compared to the one in the Module. That extra TunableVariant is an OptionalTunable as written in the Picker Class way above.
+
+An OptionalTunable can return None if disabled or the referenced Tunable Data in the OptionalTunable `tunable=` when called by choice.icon_enabled in this case.
+
+## Part V: Extra Thoughts
+
+Honestly, trying to reverse engineer the InteractionPicker code and understanding it takes a lot of time. This whole MenuUI project started out from a Python Only version which had a lot of issues which I instead went for the latter. Also moving to this version (Python XML) is significantly better is that I can easily updated my picker Menus to use this class (One of my mods has over 60 InteractionPickers, at the time of writing this, I have two SettingsUIs and approximately 64 MenuUIs, all of them are originally InteractionPickers).
+
+As all of my code are in chunks in this Markdown, I'll put up my codes for viewing (and usage if you were to use it). From there you can see the MenuUI and SettingsUI classes to understand on how I have developed it.
+
+As an added bonus, I will include some "proto-code" (time of writing code is Proto Build 24.1) MenuUI that uses an UiObjectPicker to better illustrate on using another picker instead of the UiItemPicker.
+
+If the stated codes and XMLs still confuse you, you can read the [TDESCs](https://github.com/TwelfthDoctor1/TD1-TS4-Scriptology/releases) which I have written to understand it. (Descriptions are 100% the same as those in Python Code, however it will show on how it works in XML form).
