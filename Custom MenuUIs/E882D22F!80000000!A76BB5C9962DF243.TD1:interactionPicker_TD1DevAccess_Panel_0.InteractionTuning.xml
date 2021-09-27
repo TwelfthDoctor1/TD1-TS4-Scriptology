@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="TD1DevAccessPanelMenuUIPicker" i="interaction" m="DevAccessPanel.CoreLib.TD1_DevAccessPanel_MenuUI" n="TD1:interactionPicker_TD1DevAccess_Panel_0" s="12063935904254652995">
+  <V n="_saveable" t="disabled" />
+  <T n="category">17267213579105823670<!--TD1:pieMenuCategory_TD1DevAccess--></T>
+  <V n="content_score" t="disabled" />
+  <T n="display_name">0x29249E2C<!--TD1 Developer Access Panel--></T>
+  <T n="pie_menu_priority">10</T>
+  <U n="display_name_text_tokens">
+    <L n="tokens">
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Actor</E>
+            </U>
+          </V>
+        </U>
+      </V>
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Object</E>
+            </U>
+          </V>
+        </U>
+      </V>
+    </L>
+  </U>
+  <L n="interaction_category_tags">
+    <E>INVALID</E>
+  </L>
+  <L n="possible_actions">
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">12063935904254652994<!--TD1:interactionPicker_TD1DevAccess_Panel_1--></T>
+          </U>
+        </L>
+        <V n="icon_enabled" t="enabled">
+          <V n="enabled" t="resource_key">
+            <U n="resource_key">
+              <T n="key">2f7d0004:00000000:A76AC5C9962DF26A<!--TD1 Dev Access | Sage of Mastery Magic--></T>
+            </U>
+          </V>
+        </V>
+        <V n="name" t="enabled">
+          <T n="enabled">0x7404005A<!--TD1 Dev Access | Sage of Mastery Magic--></T>
+        </V>
+        <V n="item_description" t="enabled">
+          <T n="enabled">0x956ADA87<!--Access Debug Interactions for the Sage of Mastery Magic + Mastery Spells + Ghost Butler Mod.--></T>
+        </V>
+        <V n="item_tooltip" t="enabled">
+          <T n="enabled">0x956ADA87<!--Access Debug Interactions for the Sage of Mastery Magic + Mastery Spells + Ghost Butler Mod.--></T>
+        </V>
+      </U>
+    </V>
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">12063935904254652993<!--TD1:interactionPicker_TD1DevAccess_Panel_2--></T>
+          </U>
+        </L>
+        <V n="icon_enabled" t="enabled">
+          <V n="enabled" t="resource_key">
+            <U n="resource_key">
+              <T n="key">2f7d0004:00000000:C45DF1733FED8944<!--TD1 Dev Access | Debug Mods--></T>
+            </U>
+          </V>
+        </V>
+        <V n="name" t="enabled">
+          <T n="enabled">0x1A3468A1<!--TD1 Dev Access | Debug Mods--></T>
+        </V>
+        <V n="item_description" t="enabled">
+          <T n="enabled">0x956ADA88<!--Access Debug Interactions for TD1 Mods.--></T>
+        </V>
+        <V n="item_tooltip" t="enabled">
+          <T n="enabled">0x956ADA88<!--Access Debug Interactions for TD1 Mods.--></T>
+        </V>
+      </U>
+    </V>
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">12063935904254652992<!--TD1:interactionPicker_TD1DevAccess_Panel_3--></T>
+          </U>
+        </L>
+        <V n="icon_enabled" t="enabled">
+          <V n="enabled" t="resource_key">
+            <U n="resource_key">
+              <T n="key">2f7d0004:00000000:A76BB5C9962C2240</T>
+            </U>
+          </V>
+        </V>
+        <V n="name" t="enabled">
+          <T n="enabled">0x796E1582<!--TD1 Dev Access | Sims 4 Debug--></T>
+        </V>
+        <V n="item_description" t="enabled">
+          <T n="enabled">0x956ADA89<!--Access Debug Interactions contained within The Sims 4.--></T>
+        </V>
+        <V n="item_tooltip" t="enabled">
+          <T n="enabled">0x956ADA89<!--Access Debug Interactions contained within The Sims 4.--></T>
+        </V>
+      </U>
+    </V>
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">12247582661099562512<!--TD1:interactionPicker_TD1DevAccess_Panel_16--></T>
+          </U>
+        </L>
+        <V n="icon_enabled" t="enabled">
+          <V n="enabled" t="resource_key">
+            <U n="resource_key">
+              <T n="key">2f7d0004:00000000:447671045d978994</T>
+            </U>
+          </V>
+        </V>
+        <V n="name" t="enabled">
+          <T n="enabled">0x6CC28F46<!--Travel to Venue--></T>
+        </V>
+      </U>
+    </V>
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">12070586970712513366<!--TD1:immediate_Call_AccessPanel_Version--></T>
+          </U>
+        </L>
+        <V n="icon_enabled" t="enabled">
+          <V n="enabled" t="resource_key">
+            <U n="resource_key">
+              <T n="key">2f7d0004:00000000:C45DF1733FED8944</T>
+            </U>
+          </V>
+        </V>
+        <V n="name" t="enabled">
+          <T n="enabled">0x62B6C58B<!--Call Version Numbers--></T>
+        </V>
+      </U>
+    </V>
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">17475563036565053962<!--TD1:immediate_ShowPackEntitlements--></T>
+          </U>
+        </L>
+        <V n="icon_enabled" t="enabled">
+          <V n="enabled" t="resource_key">
+            <U n="resource_key">
+              <T n="key">2f7d0004:00000000:C45DF1733FED8944</T>
+            </U>
+          </V>
+        </V>
+      </U>
+    </V>
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">9938647057683392288<!--TD1:immediate_ShowIntegrations--></T>
+          </U>
+        </L>
+        <V n="icon_enabled" t="enabled">
+          <V n="enabled" t="resource_key">
+            <U n="resource_key">
+              <T n="key">2f7d0004:00000000:C45DF1733FED8944</T>
+            </U>
+          </V>
+        </V>
+      </U>
+    </V>
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">12663193381494249352<!--TD1:immediate_ShowTuningModifiers--></T>
+          </U>
+        </L>
+        <V n="icon_enabled" t="enabled">
+          <V n="enabled" t="resource_key">
+            <U n="resource_key">
+              <T n="key">2f7d0004:00000000:C45DF1733FED8944</T>
+            </U>
+          </V>
+        </V>
+      </U>
+    </V>
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">12247585959634447113<!--TD1:interactionPicker_TD1DevAccess_Panel_66--></T>
+          </U>
+        </L>
+        <V n="icon_enabled" t="enabled">
+          <V n="enabled" t="resource_key">
+            <U n="resource_key">
+              <T n="key">2f7d0004:00000000:A76AC5C9962DF26E</T>
+            </U>
+          </V>
+        </V>
+        <V n="name" t="enabled">
+          <T n="enabled">0x8613013E<!--TD1 Dev Access | Mod Settings & Config--></T>
+        </V>
+        <V n="item_description" t="enabled">
+          <T n="enabled">0xF605179E<!--Access Mod Settings and Config Operations for this Mod.--></T>
+        </V>
+        <V n="item_tooltip" t="enabled">
+          <T n="enabled">0xF605179E<!--Access Mod Settings and Config Operations for this Mod.--></T>
+        </V>
+      </U>
+    </V>
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">12059503387640811203<!--TD1:immediate_ExitMenu--></T>
+          </U>
+        </L>
+        <?ignore <V n="icon_enabled" t="enabled">
+          <V n="enabled" t="resource_key">
+            <U n="resource_key">
+              <T n="key">2f7d0004:00000000:8D62163B15A04B35<!--Exit--></T>
+            </U>
+          </V>
+        </V> ?>
+        <V n="name" t="enabled">
+          <T n="enabled">0xD6ECD0F6<!--Exit Menu--></T>
+        </V>
+        <E n="base_icon_enabled">MENU_EXIT</E>
+      </U>
+    </V>
+  </L>
+  <U n="progress_bar_enabled">
+    <T n="bar_enabled">False</T>
+  </U>
+  <E n="target_type">OBJECT</E>
+  <L n="test_globals">
+    <V t="identity">
+      <U n="identity">
+        <T n="subjects_match">True</T>
+      </U>
+    </V>
+  </L>
+</I>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<M n="DevAccessPanel.CoreLib.TD1_DevAccessPanel_MenuUI" s="5462905705901225125">
+  <C n="MenuUIBaseIcons">
+    <V n="UI_ICON_SETTINGS_ENABLED" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:A76AC5C9962DF26F</T>
+      </U>
+    </V>
+    <V n="UI_ICON_SETTINGS_DISABLED" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:A76AC5C9962DF270</T>
+      </U>
+    </V>
+    <V n="UI_ICON_SETTINGS_DISALLOW" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:A76AC5C9962DF271</T>
+      </U>
+    </V>
+    <V n="UI_ICON_MENU_LOCKED" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:A76AC5C9962DF272</T>
+      </U>
+    </V>
+    <V n="UI_ICON_MENU_MISSING" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:A76AC5C9962DF273</T>
+      </U>
+    </V>
+    <V n="UI_ICON_MENU_UNKNOWN" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:A76AC5C9962DF274</T>
+      </U>
+    </V>
+    <V n="UI_ICON_MENU_BACK" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:B915A9B157875A45</T>
+      </U>
+    </V>
+    <V n="UI_ICON_MENU_EXIT" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:8D62163B15A04B35</T>
+      </U>
+    </V>
+    <V n="UI_ICON_PLACEHOLDER" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:A76AC5C9962DF275</T>
+      </U>
+    </V>
+    <V n="UI_ICON_SETTINGS_VARIATION" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:A76AC5C9962DF276</T>
+      </U>
+    </V>
+    <V n="UI_ICON_SETTINGS_MISSING" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:A76AC5C9962DF277</T>
+      </U>
+    </V>
+    <V n="UI_ICON_SETTINGS_UNKNOWN" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:A76AC5C9962DF278</T>
+      </U>
+    </V>
+  </C>
+</M>

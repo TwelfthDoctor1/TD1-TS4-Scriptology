@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="TD1DevAccessPanelSettingsUIPicker" i="interaction" m="DevAccessPanel.CoreLib.TD1_DevAccessPanel_MenuUI" n="TD1:interactionPicker_TD1DevAccess_Panel_66" s="12247585959634447113">
+  <V n="_saveable" t="disabled" />
+  <V n="content_score" t="disabled" />
+  <T n="category">17267213579105823670<!--TD1:pieMenuCategory_TD1DevAccess--></T>
+  <T n="display_name">0x8613013E<!--TD1 Dev Access | Mod Settings & Config--></T>
+  <U n="display_name_text_tokens">
+    <L n="tokens">
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Actor</E>
+            </U>
+          </V>
+        </U>
+      </V>
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Object</E>
+            </U>
+          </V>
+        </U>
+      </V>
+    </L>
+  </U>
+  <L n="interaction_category_tags">
+    <E>INVALID</E>
+  </L>
+  <L n="possible_actions">
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">16806322749610577021<!--TD1:immediate_Config_NoFunc_Interaction--></T>
+          </U>
+        </L>
+        <V n="name" t="enabled">
+          <T n="enabled">0xC1855D47<!--Startup Notifications--></T>
+        </V>
+        <T n="config_option">disable_notifs</T>
+        <E n="base_icon_enabled">SETTINGS_DISABLED</E>
+        <E n="base_icon_disabled">SETTINGS_ENABLED</E>
+      </U>
+    </V>
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">16806322749610577021<!--TD1:immediate_Config_NoFunc_Interaction--></T>
+          </U>
+        </L>
+        <V n="name" t="enabled">
+          <T n="enabled">0xC1855D49<!--Override Debug Interactions--></T>
+        </V>
+        <T n="config_option">override_debug_menu</T>
+      </U>
+    </V>
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">16806322749610577021<!--TD1:immediate_Config_NoFunc_Interaction--></T>
+          </U>
+        </L>
+        <V n="name" t="enabled">
+          <T n="enabled">0xC1855D48<!--Force Debug Interactions Into Cheat Pie Menu--></T>
+        </V>
+        <T n="config_option">force_debug_cheat_menu</T>
+      </U>
+    </V>
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">16806322749610577021<!--TD1:immediate_Config_NoFunc_Interaction--></T>
+          </U>
+        </L>
+        <V n="name" t="enabled">
+          <T n="enabled">0xC1855D4A<!--Make Pets Selectable--></T>
+        </V>
+        <T n="config_option">allow_selectable_pets</T>
+      </U>
+    </V>
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">16806322749610577021<!--TD1:immediate_Config_NoFunc_Interaction--></T>
+          </U>
+        </L>
+        <V n="name" t="enabled">
+          <T n="enabled">0xC1855D4B<!--Override Pack TestSets--></T>
+        </V>
+        <T n="config_option">override_pack_testset</T>
+        <E n="required_version_type">DEVELOPER</E>
+      </U>
+    </V>
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">16806322749610577021<!--TD1:immediate_Config_NoFunc_Interaction--></T>
+          </U>
+        </L>
+        <V n="name" t="enabled">
+          <T n="enabled">0xC1855D4C<!--Override Integration TestSets--></T>
+        </V>
+        <T n="config_option">override_integration_testset</T>
+        <E n="required_version_type">DEVELOPER</E>
+      </U>
+    </V>
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">16806322749610577021<!--TD1:immediate_Config_NoFunc_Interaction--></T>
+          </U>
+        </L>
+        <V n="name" t="enabled">
+          <T n="enabled">0xC1855D4D<!--Override Version TestSets--></T>
+        </V>
+        <T n="config_option">override_version_testset</T>
+        <E n="required_version_type">DEVELOPER</E>
+      </U>
+    </V>
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">16806322749610577021<!--TD1:immediate_Config_NoFunc_Interaction--></T>
+          </U>
+        </L>
+        <V n="name" t="enabled">
+          <T n="enabled">0xC1855D4E<!--Force Cheats into Cheat/Debug Pie Menu--></T>
+        </V>
+        <T n="config_option">cheat_debug_pie_menu</T>
+      </U>
+    </V>
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">16806322749610577021<!--TD1:immediate_Config_NoFunc_Interaction--></T>
+          </U>
+        </L>
+        <V n="name" t="enabled">
+          <T n="enabled">0xC1855D4F<!--[EP08] Organisations No Rank Decay--></T>
+        </V>
+        <T n="config_option">ep08_org_rank_decay_lock</T>
+      </U>
+    </V>
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">16806322749610577021<!--TD1:immediate_Config_NoFunc_Interaction--></T>
+          </U>
+        </L>
+        <V n="name" t="enabled">
+          <T n="enabled">0xC1855D50<!--[EP06] Celebrity Fame No Rank Decay--></T>
+        </V>
+        <T n="config_option">ep06_fame_rank_decay_lock</T>
+      </U>
+    </V>
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">16806322749610577021<!--TD1:immediate_Config_NoFunc_Interaction--></T>
+          </U>
+        </L>
+        <V n="name" t="enabled">
+          <T n="enabled">0xC1855D51<!--[EP06] Celebrity Fame No Rank Decay--></T>
+        </V>
+        <T n="config_option">ep06_fame_quirks_decay_lock</T>
+      </U>
+    </V>
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">12247585959634447112<!--TD1:interactionPicker_TD1DevAccess_Panel_67--></T>
+          </U>
+        </L>
+        <V n="icon_enabled" t="enabled">
+          <V n="enabled" t="resource_key">
+            <U n="resource_key">
+              <T n="key">2f7d0004:00000000:A76AC5C9962DF26E</T>
+            </U>
+          </V>
+        </V>
+      </U>
+    </V>
+    <V t="literal">
+      <U n="literal">
+        <L n="continuation">
+          <U>
+            <T n="affordance">12063935904254652995<!--TD1:interactionPicker_TD1DevAccess_Panel_0--></T>
+          </U>
+        </L>
+        <E n="base_icon_enabled">MENU_BACK</E>
+        <V n="name" t="enabled">
+          <T n="enabled">0x5CF9CF48<!--Back--></T>
+        </V>
+      </U>
+    </V>
+  </L>
+  <V n="pie_menu_icon" t="enabled">
+    <V n="enabled" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:A76AC5C9962DF26E</T>
+      </U>
+    </V>
+  </V>
+  <U n="progress_bar_enabled">
+    <T n="bar_enabled">False</T>
+  </U>
+  <E n="target_type">OBJECT</E>
+  <L n="test_globals">
+  </L>
+</I>
