@@ -1,14 +1,16 @@
 """
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-TwelfthDoctor1's Developer/Debug Access Panel
+TwelfthDoctor1's Developer/Debug Access Panel [Released Code - Proto Build 24.1]
 
 > MenuUI Tuning [Origins from InteractionPicker]
 
 (C) Copyright TD1 & TWoCC 2020 - 2021
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Licensed under CC-BY-NC-ND 4.0
+Released or Open Sourced Code licensed under MIT License.
 
-https://creativecommons.org/licenses/by-nc-nd/4.0/
+Unreleased or Closed Sourced Code licensed under CC-BY-NC-ND 4.0 License.
+
+License can be found in this repository's LICENSE.
 
 Codes from other parties are not part of the License and Copyright.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
