@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<TuningRoot>
+    <Instance instance_type="snippet" class="TD1IntLootInjectorV2" module="TD1InjectorLib.TD1_InjectorLib_Add_Int_Loot_Handler" description="The Loot Int Injector V2 is used to inject or replace certain elements of interactions (specifically basic_extras and basic_liabilities)." instance_needs_reference="True" instance_subclasses_only="False" path="TD1 TDESC\Injector Library\Descriptions" use_guid_for_reference="True">
+        <TunableList name="interaction_injector" class="TunableList" description="Lists of interaction basics to be injected." display="Interaction Injector" Deprecated="False" filter="0" group="General">
+            <TunableTuple class="TunableTuple" description="Data to be injected into the specified interaction." Deprecated="False" filter="0" group="General">
+                <TunableList name="interaction_reference" class="TunableList" description="A lists of interactions to be injected." display="Interaction Reference" Deprecated="False" filter="0" group="General">
+                    <Tunable type="interaction" class="TunableReference" allow_none="False" pack_safe="True" description="The interaction to be injected." Deprecated="False" filter="0" group="General" />
+                </TunableList>
+
+                <TunableList name="basic_extras" class="TunableBasicExtras" description="The basic_extras to be appended or replaced. [Please refer to Interaction.tdesc and SuperInteraction.tdesc for basic_extras reference]" display="Basic Extras" Deprecated="False" filter="0" group="General"/>
+
+                <TunableList name="basic_liabilities" class="TunableList" description="The basic_liabilities to be appended or replaced. [Please refer to Interaction.tdesc and SuperInteraction.tdesc for basic_liabilities reference]" display="Basic Liabilities" Deprecated="False" filter="0" group="General" />
+
+                <Tunable type="bool" name="replace_basic_extras" class="Tunable" description="Modifier to determine should the interaction basic_extras be overridden." display="Replace Basic Extras" default="False" Deprecated="False" filter="0" group="General" />
+
+                <Tunable type="bool" name="replace_basic_liabilities" class="Tunable" description="Modifier to determine should the interaction basic_liabilities be overridden." display="Replace Basic Liabilities" default="False" Deprecated="False" filter="0" group="General" />
+
+                <TunableEnum type="Pack" name="pack" class="TunableEnumEntry" default="BASE_GAME" display="Pack" static_entries="sims4-common.Pack" description="The pack used to test." Deprecated="False" group="General" />
+            </TunableTuple>
+        </TunableList>
+    </Instance>
+</TuningRoot>

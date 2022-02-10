@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<TuningRoot>
+    <Instance instance_type="snippet" class="TD1AffordanceInjector" module="TD1InjectorLib.TD1_InjectorLib_Add_Int_AF2" description="The AF2 is an injector that injects affordances (or interactions) onto the specified object(s)." instance_needs_reference="True" instance_subclasses_only="False" path="TD1 TDESC\Injector Library\Descriptions" use_guid_for_reference="True">
+        <TunableList name="object_list" class="TunableList" description="List of objects that are to be injected." display="Object List" Deprecated="False" group="General">
+          <Tunable type="int" class="Tunable" allow_none="False" description="Object Instance ID of the Object." Deprecated="False" group="General" pack_safe="True" />
+        </TunableList>
+
+        <TunableEnum type="Pack" name="pack" class="TunableEnumEntry" default="BASE_GAME" display="Pack" static_entries="sims4-common.Pack" description="The pack used to test." Deprecated="False" group="General" />
+        
+        <TunableList name="affordances" class="TunableList" description="List of interactions that are to be injected into the Object List." display="Affordances" Deprecated="False" group="General">
+          <Tunable type="interaction" class="TunableReference" allow_none="False" description="Instance ID of the Interaction." Deprecated="False" group="General" pack_safe="True" />
+        </TunableList>
+
+        <Tunable type="interaction" name="affordance_reference" class="TunableReference" allow_none="False" description="The affordance used to find the object lists should the object super affordances have that affordance." Deprecated="False" group="General" pack_safe="True" />
+        
+        <TunableList name="sim_affordances" class="TunableList" description="List of interactions that are to be injected into the Sim." display="Sim Affordances" Deprecated="False" group="General">
+          <Tunable type="interaction" class="TunableReference" allow_none="False" description="Instance ID of the Interaction." Deprecated="False" group="General" pack_safe="True" />
+        </TunableList>
+        
+        <TunableList name="phone_affordances" class="TunableList" description="List of interactions that are to be injected into the Phone." display="Phone Affordances" Deprecated="False" group="General">
+          <Tunable type="interaction" class="TunableReference" allow_none="False" description="Instance ID of the Interaction." Deprecated="False" group="General" pack_safe="True" />
+        </TunableList>
+        
+        <TunableList name="terrain_affordances" class="TunableList" description="List of interactions that are to be injected into the Terrain." display="Terrain Affordances" Deprecated="False" group="General">
+          <Tunable type="interaction" class="TunableReference" allow_none="False" description="Instance ID of the Interaction." Deprecated="False" group="General" pack_safe="True" />
+        </TunableList>
+        
+        <TunableList name="affordances_to_snippet" class="TunableList" description="List of mixer interactions that are to be added onto the Sim. Requires snippet_reference to function." display="Affordances To Snippet" Deprecated="False" group="General">
+          <Tunable type="interaction" class="TunableReference" allow_none="False" description="The mixer interaction to be injected." Deprecated="False" group="General" pack_safe="True" />
+        </TunableList>
+        
+        <Tunable type="interaction" name="snippet_reference" class="TunableReference" allow_none="False" description="The mixer snippet for mixer interactions to be injected into." Deprecated="False" group="General" pack_safe="True" />
+        
+        <TunableList name="lock_aware_affordances" class="TunableList" description="List of lock aware interactions that are to be injected into the Object List." display="Affordances To Snippet" Deprecated="False" group="General">
+          <Tunable type="interaction" class="TunableReference" allow_none="False" description="Affordance Instance ID of the affordance." Deprecated="False" group="General" pack_safe="True" />
+        </TunableList>
+
+        <Tunable type="bool" name="to_sim_object" class="Tunable" allow_none="False" default="True" description="Modifier to determine if sim_affordances and phone_affordances should be targeted to the Sim Object (14965)." Deprecated="False" group="General" pack_safe="True" />
+        
+        <Tunable type="bool" name="to_cat_object" class="Tunable" allow_none="False" default="False" description="Modifier to determine if sim_affordances and phone_affordances should be targeted to the Cat Object (120621)." Deprecated="False" group="General" pack_safe="True" />
+        
+        <Tunable type="bool" name="to_dog_object" class="Tunable" allow_none="False" default="False" description="Modifier to determine if sim_affordances and phone_affordances should be targeted to the Dog Object (120620)." Deprecated="False" group="General" pack_safe="True" />
+        
+        <Tunable type="bool" name="to_smalldog_object" class="Tunable" allow_none="False" default="False" description="Modifier to determine if sim_affordances and phone_affordances should be targeted to the smallDog Object (174619)." Deprecated="False" group="General" pack_safe="True" />
+        
+        <Tunable type="bool" name="to_fox_object" class="Tunable" allow_none="False" default="False" description="Modifier to determine if sim_affordances and phone_affordances should be targeted to the fox Object (256694)." Deprecated="False" group="General" pack_safe="True" />
+        
+        <Tunable type="bool" name="lock_aware_to_sa" class="Tunable" allow_none="False" default="False" description="Modifier to determine if lock_aware_affordances should be targeted to the _super_affordances of the object." Deprecated="False" group="General" pack_safe="True" />
+        
+    </Instance>
+</TuningRoot>
