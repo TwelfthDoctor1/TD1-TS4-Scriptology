@@ -166,42 +166,6 @@ class TD1AffordanceFilterInjector(HasTunableReference, metaclass=HashedTunedInst
                                 )
                                 buff.game_effect_modifier._tuned_values = game_effect_modifiers_slots
 
-"""
-class InteractionCancelCompatibilityInjector(HasTunableReference, metaclass=HashedTunedInstanceMetaclass,
-                                             manager=services.get_instance_manager(Types.SNIPPET)):
-    INSTANCE_TUNABLES = {
-        "interaction_cancel_compatibility": TunableMapping(
-            description='A mapping between cancel reasons and affordance filters.  When a reason is requested it runs the interaction though the affordance filter that is requested along with all affordance filters in the hierarchy above it.'
-                        'For example, the wedding will ensure the the interaction matches the wedding, fire, and death reasons.'
-                        'The hierarchy of reasons is defined within python. GPE support will be needed to change or add new values to the hierarchy of reasons.',
-            key_type=TunableEnumEntry(
-                description='An interaction canceling reason.',
-                tunable_type=InteractionCancelReason,
-                default=(InteractionCancelReason.DEATH)
-            ),
-            value_type=TunableAffordanceFilterSnippet(
-                description='An affordance filter that defines which interactions are able to be canceled.  If the interaction is not compatible with the affordance filter then it will be canceled.')
-        )
-    }
-
-    __slots__ = "interaction_cancel_compatibility"
-
-    @classmethod
-    def _tuning_loaded_callback(cls):
-        temp = InteractionCancelCompatibility.INTERACTION_CANCEL_COMPATIBILITY
-        for (tuning_enum, tuning_data) in InteractionCancelCompatibility.INTERACTION_CANCEL_COMPATIBILITY.items():
-            for (injection_enum, injection_data) in cls.interaction_cancel_compatibility.items():
-                if tuning_enum == injection_enum:
-                    temp_data = temp[tuning_enum]
-
-                    temp_data.default_inclusion.include_affordances = tuning_data.default_inclusion.include_affordances + \
-                                                                      injection_data.default_inclusion.include_affordances
-
-        InteractionCancelCompatibility.INTERACTION_CANCEL_COMPATIBILITY = \
-            frozendict(dict(InteractionCancelCompatibility.INTERACTION_CANCEL_COMPATIBILITY)) + \
-            temp
-"""
-
 
 '''
 # Original Code by Kuttoe
